@@ -1,0 +1,11 @@
+url: redis.redis-qa.svc.cluster.local
+teste de conectividade: telnet redis.redis-qa.svc.cluster.local 6379
+ip externo para autenticação: redis-cli -h 10.112.135.15 -p 31699
+Obs: a vpn tem que estar ativada. Para quem usa o script de rotas tem que adicionar o ip 10.112.135.15
+
+Comandos: 
+
+imprimir todas as chaves: "keys *"
+consultar chaves: get "nomechave"
+criar chave: set "nomechave" "informação"
+deletar chave: del "nomechave"

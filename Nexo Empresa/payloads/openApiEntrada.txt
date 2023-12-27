@@ -1,0 +1,169 @@
+openapi: 3.0.2
+info:
+  title: Integração de Empresas
+  description: "Especificação da comunicação entre SAP ECC(Módulo HR) e a Camada de Desacoplamento.<BR>
+    Irá tratar o envio de dados da empresas do grupo aos sistemas interessados."
+  version: '1.0'
+
+servers:
+  - url: https://api.server.test/v1
+
+tags:
+- name: empresas.
+  description: Envio de informações de Empresas 
+
+paths:
+  /empresa:
+    post:
+      tags:
+      - empresa
+      summary: Envio de uma nova empresa
+      operationId: createEmpresa
+      requestBody:
+        content:
+          'application/json': 
+            schema:
+              $ref: '#/components/schemas/Empresa'
+        required: true
+      responses:
+        200:
+          description: Inserção realizada com sucesso.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Retorno'
+        400:
+          description: Erro no processamento da requisição.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Retorno'
+        401:
+          description: Acesso não autorizado.
+        403:
+          description: Usuário não tem acesso ao recurso.
+        404:
+          description: Not Found
+
+components:
+  schemas:
+    Empresa:
+      type: object
+      required:
+      - codigoEmpresa
+      - codigoEmpresaFPw
+      properties:
+        codigoEmpresa:
+          description: Código da Empresa - Cadastro SAP
+          type: string
+        codigoEmpresaFPw:
+          description: Código da Empresa - Cadastro FPw
+          type: string
+        nome:
+          description: Nome da Empresa
+          type: string
+        codigoGrauRisco:
+          description: Código Grau de Risco
+          type: string
+        codigoAssociado:
+          description: Código do Associado a essa empresa
+          type: string
+        codigoAtividade:
+          description: Codigo da Atividade da Empresa
+          type: string
+        nomeFantasia:
+          description: Nome fantasia da empresa
+          type: string
+        inscricaoEstadual:
+          description: Inscricao Estadual da Empresa
+          type: string
+        DDD1:
+          description: Código DDD do telefone 1 da empresa
+          type: string
+        numeroTelefone1:
+          description: Numero do telefone 1 da empresa
+          type: string
+        DDD2:
+          description: Código DDD do telefone 2 da empresa
+          type: string
+        numeroTelefone2:
+          description: Numero do telefone 2 da empresa
+          type: string
+        endereco:
+          description: Endereco da Empresa
+          type: string
+        numero:
+          description: Numero da Empresa
+          type: string
+        complemento:
+          description: Complemento do endereco da Empresa
+          type: string
+        bairro:
+          description: Bairro da Empresa
+          type: string
+        cidade:
+          description: Cidade da Empresa
+          type: string
+        estado:
+          description: Estado da Empresa
+          type: string
+        CEP:
+          description: CEP da Empresa
+          type: string
+        CNPJ:
+          description: CNPJ da Empresa
+          type: string
+        status:
+          description: Status da empresa
+            <ul><li>0 - Inativo</li><li>1 - Ativo</li></ul>
+          type: string
+          enum:
+          - 0
+          - 1
+        emailEmpresa:
+          description: E-mail da empresa
+          type: string
+        codigoNucleoAtendimento:
+          description: Nucleo Atendimento da empresa
+          type: string
+        tipoCNPJ:
+          description: Código CNPJ da empresa
+          type: string
+        referenciaProgramaExame:
+          description: Código Referencia do Programa Exame
+          type: string
+        codigoClinicaPadrao:
+          description: Codigo Clinica Padrao
+          type: string
+        codigoResponsavelSeguranca:
+          description: Codigo Responsavel Seguranca
+          type: string
+        codigoMedicoCoordenador:
+          description: Codigo Medico Coordenador
+          type: string
+      xml:
+        name: Empresa
+    Retorno:
+      type: object
+      required:
+        - erro
+        - mensagem
+      properties:
+        timestamp:
+          type: string
+          format: date-time
+          description: Timestamp representando o momento do processamento.
+        idRetorno:
+          type: string
+          description: Identificador do processamento das informações da integração.
+        mensagem:
+          type: string
+          description: Mensagem de retorno para troubleshooting.
+        correlationId:
+          type: string
+          description: Identificador de trace para rastreamento da requisição no log.
+        path:
+          type: string
+          description: HTTP path da requisição.
+      xml:
+        name: Retorno

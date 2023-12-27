@@ -1,0 +1,35 @@
+curl --location --request PATCH 'https://homologacaoapi.nexoweb.com/NexoAPIRest/api/empresa('\''1teste'\'')' \
+--header 'Authorization: Bearer 78-Tcc7rIo19kDZGbcSfBw1RwwkU0NoUUs0CK9FFbjhjBk4VbmoJZTh6Vvqd3tw8bT8JAwtMFUrqgcif7OQchauyFCvkJ_RGg1zjqas2uqKXcZKotSU-pfa8qZbfDRZ66lZQiOI-_SBptYb7ZClroglxo4rRwsnJ2J-SbDsCzgxtiPXLWcq6uwK1ENAdXoWjyprqdvC_NJD_UHZYXUPVQ810HTWoSeDk1IrD0uEYYnHUOmtu9QPf_ZVcmyhVs5VueJAj9jgwU7sj6LPyHmkZ0tXkiO8pecfvrvYyG5MCWDbFEpG3TY8uVdiOaRnjo7Ej49PHyr83Zitrtt-OW4X1FKoqBvHh_etCxuwGfk1xafl4euZOGFX21v-DlmBLmnFtZ27cmGsi8TRqR7v5Aw9xrkiD31Bk4AhEU2Vhe8khtlM' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+            "Codigo": "1teste",
+            "Nome": "Nexo Cs Informatica - SPS",
+            "CodigoGrauDeRisco": null,
+            "Associado": true,
+            "CodigoAtividade": "8542-2/00",
+            "NomeFantasia": "Nexo Cs Informatica - SP",
+            "InscricaoEstadual": null,
+            "Ddd1": "11",
+            "Telefone1": "36771210",
+            "Ddd2": null,
+            "Telefone2": null,
+            "Endereco": "Rua Candido Espinheira",
+            "Numero": 1000,
+            "Complemento": "7º Andar",
+            "Bairro": "Perdizes",
+            "Cidade": "São Paulo",
+            "Estado": "SP",
+            "Cep": "06950-000",
+            "CNPJ": "01023164000288",
+            "Desativada": false,
+            "Email": null,
+            "CodigoNucleoDeAtendimento": null,
+            "TipoCnpj": "CNPJ",
+            "referenciaDeProgramacaoExame": "ULTIMO EXAME",
+            "CodigoClinicaPadrao": null,
+            "CodigoResponsavelSeguranca": null,
+            "CodigoMedicoCoordenador": null,
+            "DataInicioHistoricoMedicoCoordenador": null,
+            "DataFimHistoricoMedicoCoordenador": null,
+            "Imagem": null
+        }'

@@ -1,0 +1,8 @@
+{
+    "httpStatusCode": "400",
+    "mensagemStatusCode": "Bad Request",
+    "mensagemException": "Validation failed for: br.com.light.domain.MensagemEntrada@7015bbd3 errors: [property: d1senha; value: null; constraint: não deve estar vazio; ]. Exchange[]",
+    "timestamp": "2022-11-08T19:30:53",
+    "correlationId": "679631bc-980f-48f3-b7b3-5d3da36a6310",
+    "classeException": "org.apache.camel.component.bean.validator.BeanValidationException"
+}

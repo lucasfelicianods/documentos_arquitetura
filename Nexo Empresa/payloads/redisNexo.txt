@@ -1,0 +1,10 @@
+{
+    "access_token": "qkL0_ZodPXDSk-veUPmYvMxphNj8c1BCw0CKP3N2UqbDgs6zBUAhqAEPFlL_nD4dbxJ_nBWTnAiMuzIksQ07MbTLFzlDPA1PMtnqJEqRcbFJ_N5SgkPjGHdjw4bMbiBYwy3JrwjitcUtdlF3S4v2VKVJLMWON3vCKE7cZHjlJ8cO7DSwNdmV3tOXxwtH6c6AkCXfv8LQsGX7jpuHG4mJyOvx8jQL5WTcxLGqk-5RIq_kGUi1DCtryhT4HE8c6a_4EO4wjwazQmGpMNohzr-x8oRkanZu9hHIhdexFjchlcbyaq5lTkT7QXY9TDGecu2QxnIh9A3K1Vj0tJkjhy0x8v4VJMarvPkhRI1sQ4O5nazbElnWaQnH2rPbmrH_FAgWLougfrSZ3c9F00EY-SmHOw",
+    "token_type": "bearer",
+    "expires_in": 32399,
+    "refresh_token": "cVkkDJ4ZMWn4srtmcvgOTKksIf4zvkw6kanrTAChea2XwRnApbi3a9VEiUrixoAw6ruMBB_mgyexqQRu018ApQKT9bRVxdNiNKOV10TVvdT2so1114ylue91X6m7odf_SyTqr9UBiShpz24xfKbQCW6fS-H7g3vA6_4mhq8ueHITqULrCFVP7S-fkY16gD6Lagmx0VYtWeH0UORnDe9Qe5-fZqFQ24-Obfb5I5Jrh75555_zph4_3ysCpUuF7yYGGPRTzRLhZMP1URFp2BhMxCUe_VKbrk8dg8qhFjhX1oBbZtpoY4BeYHkmgvbRSmaAItgd_t8q9GrA3c3WqMLumImNsGqUdGFk8y_hqwfJdQhS43TD9GGIx2oHJUMpwqod0C73hk5WVMGvNBu8vUMRVQ",
+    "client_id": "LIGHT",
+    "codigo_usuario": "LIGHTAPI",
+    ".issued": "Tue, 06 Dec 2022 14:59:59 GMT",
+    ".expires": "Tue, 06 Dec 2022 23:59:59 GMT"
+}

@@ -1,0 +1,11 @@
+{
+  "httpStatusCode": "500",
+  "mensagemStatusCode": "INTERNAL_SERVER_ERROR",
+  "mensagemException": "HTTP response \u0027503: Service Unavailable\u0027 when communicating with http://ssqplci.light.com.br:50200/XISOAPAdapter/MessageServlet?channel\u003d:BC_TJRIO:SOAPSender_ValidacaoDados_USERTJ\u0026amp;version\u003d3.0\u0026amp;Sender.Service\u003dBC_TJRIO\u0026amp;Interface\u003dhttp%3A%2F%2Fren%2Ftjrio%2Fccs%2F001%5EValidacaoDadosSyncOut_SI",
+  "timestamp": "2022-08-26T14:57:39",
+  "correlationId": "a57f5e23-bba7-4328-9411-64dbb2b3e2be",
+  "classeException": "org.apache.cxf.transport.http.HTTPException",
+  "bodyResponse": "",
+  "bodyRequest": "",
+  "payloadEntrada ": ""
+}

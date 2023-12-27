@@ -1,0 +1,1860 @@
+{
+	"info": {
+		"_postman_id": "144c931c-67e8-4826-a1cd-ed4e1dc7c840",
+		"name": "API- Nexo Homologação",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Token Gerar",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "123444",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "username",
+							"value": "NEXOAPI",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "YWq#D4lb0cih",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "client_ID",
+							"value": "APRESENTACAO",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "https://HOMOLOGACAOapi.nexoweb.com/NexoAPIRest/token?client_id=APRESENTACAO&username=NEXOAPI&password=YWq%23D4lb0cih&grant_type=password",
+					"protocol": "https",
+					"host": [
+						"HOMOLOGACAOapi",
+						"nexoweb",
+						"com"
+					],
+					"path": [
+						"NexoAPIRest",
+						"token"
+					],
+					"query": [
+						{
+							"key": "client_id",
+							"value": "APRESENTACAO"
+						},
+						{
+							"key": "username",
+							"value": "NEXOAPI"
+						},
+						{
+							"key": "password",
+							"value": "YWq%23D4lb0cih"
+						},
+						{
+							"key": "grant_type",
+							"value": "password"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ASO Inserir",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "YVgSNtd-U8rADv3D5KSahLuJFIVhGP54s3aPkS0f-N5Tx4J9PGvKLbgS4PxXD6WolNzhOCfhExH5taJWofzNb5JY5byxu62You48QQItQHxfx14lvYDtXqGuYSqaH5wAWr5IuxeObqJ5pX5b3mnN2sES0bBOdSEFYyauL2P_ChmtgtXy7dZyTlieBhfKZe5NNP-T7h2JkIEV60qsQsIyy6iXIXFMntq21BKQ0nK4V18UDRzh7SHSVM4rMZjX944GjUVxGtK0o-hQ2gEPqzGd_4t8cr8h29U0gNs-VywzzHsZN_6wNNfJNaMNgJ9JMDxUM8_koEh77VR8kDxWE8dbIVWzcKfBhp9rEB9SDjQUwag",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n            \"Codigo\": \"10009\",\r\n            \"CodigoFuncionario\": \"1895\",\r\n            \"NomeDoFuncionario\": \"ADRIANA SANTOS\",\r\n            \"DataDoASO\": \"2022-03-23T00:00:00-03:00\",\r\n            \"DataPrevistaDoProximoASO\": \"2023-01-15T00:00:00-03:00\",\r\n            \"DataPrevistaDesteASO\": \"2023-03-23T00:00:00-03:00\",\r\n            \"CodigoEmpresa\": \"2\",\r\n            \"CodigoLotacao\": null,\r\n            \"Validade\": 12,\r\n            \"Observacao\": null,\r\n            \"SeqDigital\": null,\r\n            \"NexoID\": null,\r\n            \"DataCancelamento\": null,\r\n            \"ObservacaoCancelamento\": null,\r\n            \"Cancelado\": false,\r\n            \"EstaApto\": false,\r\n            \"IndRetificacao\": 0,\r\n            \"CodigoTipoDeExame\": \"02\",\r\n            \"CodigoClinica\": \"001\",\r\n            \"CodigoMedico\": \"82\",\r\n            \"CodigoCoordenador\": \"18420PE\"\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://homologacaoapi.nexoweb.com/NexoAPIRest/api/ASO",
+					"protocol": "https",
+					"host": [
+						"homologacaoapi",
+						"nexoweb",
+						"com"
+					],
+					"path": [
+						"NexoAPIRest",
+						"api",
+						"ASO"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TipoAusencia consultar",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Qqcj91OZhiSMvRPUlkZ-I48IvHsxJJ6Y1nF970w8w1oLy8G7gnjOZN8HbLRR7apwWHfZ6SrTyIZqEe1Y3__x87IjhzYoNiBPdxeomVdlbDtXZrYQAp0M7UKRT6dzKrEyWVYhPFGZmg0iFlARGFMk3dNO2TGUvVRmfO50wEBZIIuVUNlUd3tFceewHhjPq6Ri93eXVrzC3p-HoM0MxyLoxzpF7IazPgI6VQNf3qu8dvJZfWkX7VnjCGnrBcw3JQNBhpu12U9D_9CEcUhpRXTmzgsUNtY-nt7y1Zf9F6ApGGcgq3hFyzBHD-0Y56jGUBuUClVxxPyrDcPiXkoUfPp9U6F4EhZ8hI-f8_uct0nOOqBKwh3AkXOr7aY27R6WfmNL4Dumsb7LxU5--rjkN4J-qCtnvGCAGJPgEQidxmGzo9Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n            \"Codigo\": \"10009\",\r\n            \"CodigoFuncionario\": \"1895\",\r\n            \"NomeDoFuncionario\": \"ADRIANA SANTOS\",\r\n            \"DataDoASO\": \"2022-03-23T00:00:00-03:00\",\r\n            \"DataPrevistaDoProximoASO\": \"2023-01-15T00:00:00-03:00\",\r\n            \"DataPrevistaDesteASO\": \"2023-03-23T00:00:00-03:00\",\r\n            \"CodigoEmpresa\": \"2\",\r\n            \"CodigoLotacao\": null,\r\n            \"Validade\": 12,\r\n            \"Observacao\": null,\r\n            \"SeqDigital\": null,\r\n            \"NexoID\": null,\r\n            \"DataCancelamento\": null,\r\n            \"ObservacaoCancelamento\": null,\r\n            \"Cancelado\": false,\r\n            \"EstaApto\": false,\r\n            \"IndRetificacao\": 0,\r\n            \"CodigoTipoDeExame\": \"02\",\r\n            \"CodigoClinica\": \"001\",\r\n            \"CodigoMedico\": \"82\",\r\n            \"CodigoCoordenador\": \"18420PE\"\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://homologacaoapi.nexoweb.com/NexoAPIRest/api/TipoAbsenteismo",
+					"protocol": "https",
+					"host": [
+						"homologacaoapi",
+						"nexoweb",
+						"com"
+					],
+					"path": [
+						"NexoAPIRest",
+						"api",
+						"TipoAbsenteismo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usuarios Buscar",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "JgSpwoRg_2wPMLlW4UZK3iA_J0NXPtpvOwrAM2LMo0b_3I--MrMmUEnrmDCJPiAGP2xFH24soaUaxkGCAOEKlLoK8qbEPERX2zmV79Km5jJWjo3dBG6LVpYzhT-_iIAA9hhT68e4RNaCODelDsrjdEM_H2wb_2ueeqdgStU7aLZ2bZUxkYdt6gjlddYyKeYbwtycPN6PiJaJr7WOtHSmqo1nQrmcHPBL8OhPebQDKJBoo7xn-Ar73ASgKn-Fi-UOMtQ27PWRHYrxrLGzL1zjf5cvrwc2j7z0pE0Ow4AhKDGS51kszXSjz5ahx4qYonp6Vcycl70evFrmSoYc0M3YkZSk-i3Lhvsw_p2zBjowThSLN90actudV5c7rpqapK8mrkoulBYlIf_R2c1YW6ilk2JtXxHX6GwD3inGAKaiWbU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n            \"Codigo\": \"10009\",\r\n            \"CodigoFuncionario\": \"1895\",\r\n            \"NomeDoFuncionario\": \"ADRIANA SANTOS\",\r\n            \"DataDoASO\": \"2022-03-23T00:00:00-03:00\",\r\n            \"DataPrevistaDoProximoASO\": \"2023-01-15T00:00:00-03:00\",\r\n            \"DataPrevistaDesteASO\": \"2023-03-23T00:00:00-03:00\",\r\n            \"CodigoEmpresa\": \"2\",\r\n            \"CodigoLotacao\": null,\r\n            \"Validade\": 12,\r\n            \"Observacao\": null,\r\n            \"SeqDigital\": null,\r\n            \"NexoID\": null,\r\n            \"DataCancelamento\": null,\r\n            \"ObservacaoCancelamento\": null,\r\n            \"Cancelado\": false,\r\n            \"EstaApto\": false,\r\n            \"IndRetificacao\": 0,\r\n            \"CodigoTipoDeExame\": \"02\",\r\n            \"CodigoClinica\": \"001\",\r\n            \"CodigoMedico\": \"82\",\r\n            \"CodigoCoordenador\": \"18420PE\"\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://homologacaoapi.nexoweb.com/NexoAPIRest/api/usuario",
+					"protocol": "https",
+					"host": [
+						"homologacaoapi",
+						"nexoweb",
+						"com"
+					],
+					"path": [
+						"NexoAPIRest",
+						"api",
+						"usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usuarios Inserir",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "qg1E6lK-MMBYnLU4Pr1KL9vfQ0e589WcL_mMliBCAquAmk6XMsS-AaUNPDO1VkzAMl_DD1cchudR4J9fQCM1smjrMCXPAWa8Z1zhNOJMb8Opc-mNOK_p8PGrUSFeu6Li3p_uroNeVUxhKweQXUaojB8F3B9WIdMyVt7MS8ZgTrY2csKPZ9m77tQO7cgQfSVBHshWpKV6GZJ6cWgOy4_r2hBS2WB03JfjAfus3x4Z9Fj_raZ6yT_fJLdvLK-Ds6nZYA209NE9qGr3cEnJAPR9W4aE5efXFpCmKkqyyjhwH1DYGvmn9WYmFHIIxDUJlxtztvzRmkt7sqvdvRso2uSOrOOOhNxmWte5kiW4JDgLIBfqvd22KxVlvRXut_ZOVVpoOubZ9TBlN3lDfY-qQ2AlJLltosCxyL_UOiF4st_cbOY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"Codigo\": \"MENS\",\r\n            \"Nome\": \"MENS\",\r\n            \"Login\": \"MENS\",\r\n            \"Senha\": \"77ox28247ff138ox18684ff234ox31422ff332ox32725ff\",\r\n            \"Ativo_Web\": true,\r\n            \"Bloqueado\": false,\r\n            \"Ativo\": true,\r\n            \"HabSomenteControleAcesso\": false,\r\n            \"Funcao\": \"MENS\",\r\n            \"Email\": null,\r\n            \"FormaDeAutenticacao\": \"PADRAO\",\r\n            \"CodigoEmpresa\": null,\r\n            \"CodigoLotacao\": null,\r\n            \"DataInclusaoSistema\": \"2021-06-23T14:32:18-03:00\",\r\n            \"DataAlteracaoSistema\": null,\r\n            \"CargaHora\": 0,\r\n            \"HoraInicio\": \"0001-01-01T00:00:00-02:00\",\r\n            \"HoraFim\": \"0001-01-01T00:00:00-02:00\",\r\n            \"VistoNovidades\": null,\r\n            \"Foto\": null,\r\n            \"TipoUsuario\": null\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://homologacaoapi.nexoweb.com/NexoAPIRest/api/usuario",
+					"protocol": "https",
+					"host": [
+						"homologacaoapi",
+						"nexoweb",
+						"com"
+					],
+					"path": [
+						"NexoAPIRest",
+						"api",
+						"usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Absenteismo consultar",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "qg1E6lK-MMBYnLU4Pr1KL9vfQ0e589WcL_mMliBCAquAmk6XMsS-AaUNPDO1VkzAMl_DD1cchudR4J9fQCM1smjrMCXPAWa8Z1zhNOJMb8Opc-mNOK_p8PGrUSFeu6Li3p_uroNeVUxhKweQXUaojB8F3B9WIdMyVt7MS8ZgTrY2csKPZ9m77tQO7cgQfSVBHshWpKV6GZJ6cWgOy4_r2hBS2WB03JfjAfus3x4Z9Fj_raZ6yT_fJLdvLK-Ds6nZYA209NE9qGr3cEnJAPR9W4aE5efXFpCmKkqyyjhwH1DYGvmn9WYmFHIIxDUJlxtztvzRmkt7sqvdvRso2uSOrOOOhNxmWte5kiW4JDgLIBfqvd22KxVlvRXut_ZOVVpoOubZ9TBlN3lDfY-qQ2AlJLltosCxyL_UOiF4st_cbOY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n            \"Codigo\": \"10009\",\r\n            \"CodigoFuncionario\": \"1895\",\r\n            \"NomeDoFuncionario\": \"ADRIANA SANTOS\",\r\n            \"DataDoASO\": \"2022-03-23T00:00:00-03:00\",\r\n            \"DataPrevistaDoProximoASO\": \"2023-01-15T00:00:00-03:00\",\r\n            \"DataPrevistaDesteASO\": \"2023-03-23T00:00:00-03:00\",\r\n            \"CodigoEmpresa\": \"2\",\r\n            \"CodigoLotacao\": null,\r\n            \"Validade\": 12,\r\n            \"Observacao\": null,\r\n            \"SeqDigital\": null,\r\n            \"NexoID\": null,\r\n            \"DataCancelamento\": null,\r\n            \"ObservacaoCancelamento\": null,\r\n            \"Cancelado\": false,\r\n            \"EstaApto\": false,\r\n            \"IndRetificacao\": 0,\r\n            \"CodigoTipoDeExame\": \"02\",\r\n            \"CodigoClinica\": \"001\",\r\n            \"CodigoMedico\": \"82\",\r\n            \"CodigoCoordenador\": \"18420PE\"\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://homologacaoapi.nexoweb.com/NexoAPIRest/api/Afastamento",
+					"protocol": "https",
+					"host": [
+						"homologacaoapi",
+						"nexoweb",
+						"com"
+					],
+					"path": [
+						"NexoAPIRest",
+						"api",
+						"Afastamento"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Absenteismo  inserir",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "4RvyD8YUGEV6YsZMUts4AeD1TbA08VFVKtA_AcaN0wgxC3dP6-nIccpOXxUROVS957_kh3tgy3gM99qXowHxpexeyE6Mke4u8iHTo9Q5FBjJ9SEh7hKLhS6kPLin4FEW6QWjEH7r8EHC5QhrxsvQCukBvIq-W3DVCKibvZ3c4pTMn7c3mHH6wohq7ShjB_be5VGvrd3HR0B_4trVRt_qwoaDGwS5pRe7CSBrfcaRiwO_1UaImDi97KwJFFYOcDuOTglfQKWIzJq8EYYasA4kFXhVt4O5I1QFTCLMJjcCqgeVMtPB6WL9lHqynD83KTMAHHto_Y80S6vsTO1dlDy8XoWQ2YFc4R1mXmcdzd8xTJzqkaTEIco-xa5qAA6c8-C9LsLS42pWgeF1Mto_7bo6Levd1xVEpPL3R16BqsV4hGg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"Codigo\": \"0\",\r\n            \"CodigoEmpresa\": \"2\",\r\n            \"CodigoFuncionario\": \"D001\",\r\n            \"DataDeSaida\": \"2035-05-15T00:00:00-03:00\",\r\n            \"CodigoSetor\": \"Fábrica\",\r\n            \"CodigoClassificador\": null,\r\n            \"CodigoLotacao\": \"1\",\r\n            \"CodigoCargo\": \"Auxiliar de Serralheiro\",\r\n            \"NumeroAtestado\": 1,\r\n            \"DataPrevisaoRetorno\": \"2035-05-29T00:00:00-03:00\",\r\n            \"DataDeVolta\": \"2035-05-29T00:00:00-03:00\",\r\n            \"TotalDeDias\": 16.0,\r\n            \"HoraDeSaida\": null,\r\n            \"HoraVolta\": null,\r\n            \"DataEfetivaRetorno\": null,\r\n            \"TotalDeHoras\": null,\r\n            \"TotalDiasDeduzir\": null,\r\n            \"TotalDiasAusente\": 15,\r\n            \"DataAtestado\": null,\r\n            \"Externo\": true,\r\n            \"Definitivo\": false,\r\n            \"Cancelado\": false,\r\n            \"Observacao\": \"Funcionário sofreu uma fratura em tornozelo D, após uma queda de moto. Episódio realizado fora do horário de trabalho e não sendo em trajeto para o trabalho.\",\r\n            \"DataMemorando\": null,\r\n            \"NumeroMemorando\": null,\r\n            \"NumeroPortaria\": null,\r\n            \"DataCancelamento\": null,\r\n            \"HoraTrabalhada\": null,\r\n            \"CNPJCessao\": null,\r\n            \"CNPJSindicato\": null,\r\n            \"OnusRemuneracao\": 0,\r\n            \"OnusCessao\": 0,\r\n            \"SemInterrupcao\": false,\r\n            \"MesmoMotivoAnterior\": false,\r\n            \"CodigoTipoAbsenteismoPadrao\": null,\r\n            \"CodigoTipoAbsenteismo\": \"001\",\r\n            \"CodigoMedicoEmissorAtestado\": \"1045245RJ\",\r\n            \"CodigoMedico\": \"1045245RJ\",\r\n            \"CodigoParecer\": \"007\",\r\n            \"CodigoDoenca\": \"S92.9\",\r\n            \"CodigoUsuarioCancelamento\": null,\r\n            \"CodigoUsuario\": \"USU1\",\r\n            \"CodigoEspecialidadeEmissor\": null,\r\n            \"CodigoEspecialidadeDoenca\": null\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://homologacaoapi.nexoweb.com/NexoAPIRest/api/Afastamento",
+					"protocol": "https",
+					"host": [
+						"homologacaoapi",
+						"nexoweb",
+						"com"
+					],
+					"path": [
+						"NexoAPIRest",
+						"api",
+						"Afastamento"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Profissional buscar",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "4RvyD8YUGEV6YsZMUts4AeD1TbA08VFVKtA_AcaN0wgxC3dP6-nIccpOXxUROVS957_kh3tgy3gM99qXowHxpexeyE6Mke4u8iHTo9Q5FBjJ9SEh7hKLhS6kPLin4FEW6QWjEH7r8EHC5QhrxsvQCukBvIq-W3DVCKibvZ3c4pTMn7c3mHH6wohq7ShjB_be5VGvrd3HR0B_4trVRt_qwoaDGwS5pRe7CSBrfcaRiwO_1UaImDi97KwJFFYOcDuOTglfQKWIzJq8EYYasA4kFXhVt4O5I1QFTCLMJjcCqgeVMtPB6WL9lHqynD83KTMAHHto_Y80S6vsTO1dlDy8XoWQ2YFc4R1mXmcdzd8xTJzqkaTEIco-xa5qAA6c8-C9LsLS42pWgeF1Mto_7bo6Levd1xVEpPL3R16BqsV4hGg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n            \"Codigo\": \"10009\",\r\n            \"CodigoFuncionario\": \"1895\",\r\n            \"NomeDoFuncionario\": \"ADRIANA SANTOS\",\r\n            \"DataDoASO\": \"2022-03-23T00:00:00-03:00\",\r\n            \"DataPrevistaDoProximoASO\": \"2023-01-15T00:00:00-03:00\",\r\n            \"DataPrevistaDesteASO\": \"2023-03-23T00:00:00-03:00\",\r\n            \"CodigoEmpresa\": \"2\",\r\n            \"CodigoLotacao\": null,\r\n            \"Validade\": 12,\r\n            \"Observacao\": null,\r\n            \"SeqDigital\": null,\r\n            \"NexoID\": null,\r\n            \"DataCancelamento\": null,\r\n            \"ObservacaoCancelamento\": null,\r\n            \"Cancelado\": false,\r\n            \"EstaApto\": false,\r\n            \"IndRetificacao\": 0,\r\n            \"CodigoTipoDeExame\": \"02\",\r\n            \"CodigoClinica\": \"001\",\r\n            \"CodigoMedico\": \"82\",\r\n            \"CodigoCoordenador\": \"18420PE\"\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://homologacaoapi.nexoweb.com/NexoAPIRest/api/Profissional?$filter=codigo eq 'zzz'",
+					"protocol": "https",
+					"host": [
+						"homologacaoapi",
+						"nexoweb",
+						"com"
+					],
+					"path": [
+						"NexoAPIRest",
+						"api",
+						"Profissional"
+					],
+					"query": [
+						{
+							"key": "$filter",
+							"value": "codigo eq 'zzz'"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Doença buscar",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "qg1E6lK-MMBYnLU4Pr1KL9vfQ0e589WcL_mMliBCAquAmk6XMsS-AaUNPDO1VkzAMl_DD1cchudR4J9fQCM1smjrMCXPAWa8Z1zhNOJMb8Opc-mNOK_p8PGrUSFeu6Li3p_uroNeVUxhKweQXUaojB8F3B9WIdMyVt7MS8ZgTrY2csKPZ9m77tQO7cgQfSVBHshWpKV6GZJ6cWgOy4_r2hBS2WB03JfjAfus3x4Z9Fj_raZ6yT_fJLdvLK-Ds6nZYA209NE9qGr3cEnJAPR9W4aE5efXFpCmKkqyyjhwH1DYGvmn9WYmFHIIxDUJlxtztvzRmkt7sqvdvRso2uSOrOOOhNxmWte5kiW4JDgLIBfqvd22KxVlvRXut_ZOVVpoOubZ9TBlN3lDfY-qQ2AlJLltosCxyL_UOiF4st_cbOY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n            \"Codigo\": \"10009\",\r\n            \"CodigoFuncionario\": \"1895\",\r\n            \"NomeDoFuncionario\": \"ADRIANA SANTOS\",\r\n            \"DataDoASO\": \"2022-03-23T00:00:00-03:00\",\r\n            \"DataPrevistaDoProximoASO\": \"2023-01-15T00:00:00-03:00\",\r\n            \"DataPrevistaDesteASO\": \"2023-03-23T00:00:00-03:00\",\r\n            \"CodigoEmpresa\": \"2\",\r\n            \"CodigoLotacao\": null,\r\n            \"Validade\": 12,\r\n            \"Observacao\": null,\r\n            \"SeqDigital\": null,\r\n            \"NexoID\": null,\r\n            \"DataCancelamento\": null,\r\n            \"ObservacaoCancelamento\": null,\r\n            \"Cancelado\": false,\r\n            \"EstaApto\": false,\r\n            \"IndRetificacao\": 0,\r\n            \"CodigoTipoDeExame\": \"02\",\r\n            \"CodigoClinica\": \"001\",\r\n            \"CodigoMedico\": \"82\",\r\n            \"CodigoCoordenador\": \"18420PE\"\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://homologacaoapi.nexoweb.com/NexoAPIRest/api/Doenca",
+					"protocol": "https",
+					"host": [
+						"homologacaoapi",
+						"nexoweb",
+						"com"
+					],
+					"path": [
+						"NexoAPIRest",
+						"api",
+						"Doenca"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Doença buscar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "4RvyD8YUGEV6YsZMUts4AeD1TbA08VFVKtA_AcaN0wgxC3dP6-nIccpOXxUROVS957_kh3tgy3gM99qXowHxpexeyE6Mke4u8iHTo9Q5FBjJ9SEh7hKLhS6kPLin4FEW6QWjEH7r8EHC5QhrxsvQCukBvIq-W3DVCKibvZ3c4pTMn7c3mHH6wohq7ShjB_be5VGvrd3HR0B_4trVRt_qwoaDGwS5pRe7CSBrfcaRiwO_1UaImDi97KwJFFYOcDuOTglfQKWIzJq8EYYasA4kFXhVt4O5I1QFTCLMJjcCqgeVMtPB6WL9lHqynD83KTMAHHto_Y80S6vsTO1dlDy8XoWQ2YFc4R1mXmcdzd8xTJzqkaTEIco-xa5qAA6c8-C9LsLS42pWgeF1Mto_7bo6Levd1xVEpPL3R16BqsV4hGg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"Codigo\": \"sd00.03a71\",\r\n            \"Nome\": \" Colera dev Vibrio cholerae 01 biot cholerae\",\r\n            \"Ativo\": true,\r\n            \"CodigoGrupodeDoenca\": \"A00 - B99\"\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://homologacaoapi.nexoweb.com/NexoAPIRest/api/Doenca",
+					"protocol": "https",
+					"host": [
+						"homologacaoapi",
+						"nexoweb",
+						"com"
+					],
+					"path": [
+						"NexoAPIRest",
+						"api",
+						"Doenca"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Profissional bucar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "4RvyD8YUGEV6YsZMUts4AeD1TbA08VFVKtA_AcaN0wgxC3dP6-nIccpOXxUROVS957_kh3tgy3gM99qXowHxpexeyE6Mke4u8iHTo9Q5FBjJ9SEh7hKLhS6kPLin4FEW6QWjEH7r8EHC5QhrxsvQCukBvIq-W3DVCKibvZ3c4pTMn7c3mHH6wohq7ShjB_be5VGvrd3HR0B_4trVRt_qwoaDGwS5pRe7CSBrfcaRiwO_1UaImDi97KwJFFYOcDuOTglfQKWIzJq8EYYasA4kFXhVt4O5I1QFTCLMJjcCqgeVMtPB6WL9lHqynD83KTMAHHto_Y80S6vsTO1dlDy8XoWQ2YFc4R1mXmcdzd8xTJzqkaTEIco-xa5qAA6c8-C9LsLS42pWgeF1Mto_7bo6Levd1xVEpPL3R16BqsV4hGg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"Codigo\": \"zzz\",\r\n            \"Nome\": \"MARIA ASSISTENTE SOCIAL\",\r\n             \"CRM\": null,\r\n            \"Registro\": \"1234\",\r\n            \"TipoDocumento\": null,\r\n            \"UfCrm\": \"SP\",\r\n            \"Funcao\": \"Assistente Social\",\r\n            \"TipoProfissional\": \"A\",\r\n            \"Coordenador\": false,\r\n            \"Ativo\": true, \r\n            \"OrgaoClasse\": null\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://homologacaoapi.nexoweb.com/NexoAPIRest/api/Profissional",
+					"protocol": "https",
+					"host": [
+						"homologacaoapi",
+						"nexoweb",
+						"com"
+					],
+					"path": [
+						"NexoAPIRest",
+						"api",
+						"Profissional"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TipoAusencia Inserir",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "4RvyD8YUGEV6YsZMUts4AeD1TbA08VFVKtA_AcaN0wgxC3dP6-nIccpOXxUROVS957_kh3tgy3gM99qXowHxpexeyE6Mke4u8iHTo9Q5FBjJ9SEh7hKLhS6kPLin4FEW6QWjEH7r8EHC5QhrxsvQCukBvIq-W3DVCKibvZ3c4pTMn7c3mHH6wohq7ShjB_be5VGvrd3HR0B_4trVRt_qwoaDGwS5pRe7CSBrfcaRiwO_1UaImDi97KwJFFYOcDuOTglfQKWIzJq8EYYasA4kFXhVt4O5I1QFTCLMJjcCqgeVMtPB6WL9lHqynD83KTMAHHto_Y80S6vsTO1dlDy8XoWQ2YFc4R1mXmcdzd8xTJzqkaTEIco-xa5qAA6c8-C9LsLS42pWgeF1Mto_7bo6Levd1xVEpPL3R16BqsV4hGg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"Codigo\": \"zz25\",\r\n \"Nome\": \"Doença Não Ocupacional\",\r\n \"CodigoMotivoAfastamento\": \"03\",\r\n \"Ocupacional\": true,\r\n \"AfastamentoLegal\": false,\r\n \"AtaAposentadoria\": false,\r\n \"SemJustificativa\": false,\r\n \"ObrigaCID\": false,\r\n \"AssociadoOcorrencia\": false,\r\n \"BloqueiaRegistro\": false,\r\n \"QuantidadeDeDiasParaEnvioAoEsocial\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://homologacaoapi.nexoweb.com/NexoAPIRest/api/TipoAbsenteismo",
+					"protocol": "https",
+					"host": [
+						"homologacaoapi",
+						"nexoweb",
+						"com"
+					],
+					"path": [
+						"NexoAPIRest",
+						"api",
+						"TipoAbsenteismo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ASO Buscar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "zd_O2tdZJsr-yAqrHqKv2ha8a-L7CA0vPfJyBalUoM1Sy-1gES7e_XRPnE2glg1-t8to2AuXUEvFnolwpI_QIMru-lH5p8F5HxpuwiCRuyTlAyQVl_DeGsDznGp6bOJgt9t5-wn_Duan32Mv0Tyimbb15fbEduaRVYznIhNbdqrrZhOjBMHwrDf52VzrURvfHsSE_hGiQXoCUPcbBfbSfoRvVarjaT01EXMMKONITkVDDP-qfYBDDtpisIYAWgmXP0hJMsrx7AZRF2iwuIX4P8-8z4xwWyx3kAk97osV5Znk6SP_2-dl-c_rzs0aH-XTMfkFkqAFOg9JhB3QYSYVaSb-h-9RcDVLFMyu5oTVzyS2KEogWf9HBgw2UanOr_Zl2N4thQ3YnfmyXbobYBzcDYeXiCT1mks9_5yn9G7vPJU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://homologacaoapi.nexoweb.com/NexoAPIRest/api/cargo?$filter=Codigo eq '70000730'",
+					"protocol": "https",
+					"host": [
+						"homologacaoapi",
+						"nexoweb",
+						"com"
+					],
+					"path": [
+						"NexoAPIRest",
+						"api",
+						"cargo"
+					],
+					"query": [
+						{
+							"key": "$filter",
+							"value": "Codigo eq '70000730'"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Funcionario Inserir",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "HSABR2nJUjXXAt_2WSreTksfC0K_kwdym0YF3jnXILG2vIIuaeoW44RVSWZZRY7w8uh8o1zlAccuuRPXn99qIqC7rX2-3q0SdLBSWfiGpWz9NmRoEni_qe-YuMfv7XjV1sz1QxBkUctk4D-ase4mwef8cPRqjaZCKe-AFgJpj5LiActCEkaRcyLvoVEqdq5VF6Wh9pVe197khIzfgDOwSYyPPDh-_yCSxBDWAzG_nZlNxTDNW_34PhwpxCvUk7JSiUblCIGwjxfx3GeMiGPMhO1j-NYSIVXnBy9INi-WXFgXMTKaztq8vK9117XvK9WRaoCIVa536XnG6967ZOCvlh9f997WM9Fupi6DsB5gTfg4pSzL1zEeaQk1PNBLJ2HansFw35c-UdNw4mdhTwR-lXflj0h3vPcFEQDQIMAEFhI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"Codigo\": \"testeRodrgo\",\r\n            \"CodigoEmpresa\": \"1\",\r\n            \"Nome\": \"testeRodrgo\",\r\n            \"CodigoLotacao\": \"38\",\r\n            \"Telefone\": \"11982253711Carmen,ir\",\r\n            \"CodigoSetor\": \"Seção Técnica de Saúde-2100\",\r\n            \"CodigoCargo\": \"Assistente Técnico Administrativo I-819\",\r\n            \"CodigoClassificador\": null,\r\n            \"DataAdmissao\": \"1976-10-12T00:00:00-03:00\",\r\n            \"CodigoUsuario\": null,\r\n            \"Ativo\": true,\r\n            \"CodigoTipoFuncionario\": null,\r\n            \"DataNascimento\": \"1951-07-31T00:00:00-03:00\",\r\n            \"DataDemissao\": null,\r\n            \"CarteiraDeTrabalho\": \"0000\",\r\n            \"NumeroDeSerieDaCarteiraDeTrabalho\": \"000\",\r\n            \"Sexo\": \"F\",\r\n            \"EstadoCivil\": \"SOLTEIRO\",\r\n            \"CodigoTurno\": null,\r\n            \"Contato\": null,\r\n            \"Complemento\": null,\r\n            \"Endereco\": null,\r\n            \"Numero\": null,\r\n            \"Bairro\": \"ITAIM BIBI\",\r\n            \"Cidade\": \"São Paulo\",\r\n            \"CodigoSupervisor\": null,\r\n            \"CodigoEmpresaSupervisor\": \"1\",\r\n            \"Cep\": \"04540034 \",\r\n            \"TipoSanguineo\": null,\r\n            \"EhFuncionario\": true,\r\n            \"RG\": \"0000000\",\r\n            \"Observacao\": null,\r\n            \"Email\": \"inez.macieira@unesp.br\",\r\n            \"Escolaridade\": \"Ensino Superior Completo\",\r\n            \"UfCarteiraDeTrabalho\": null,\r\n            \"MesDeReferencia\": null,\r\n            \"UfRG\": \"SP\",\r\n            \"Uf\": null,\r\n            \"NomeMae\": \"Izabel Gomes Macieira\",\r\n            \"DataDeEmissao\": null,\r\n            \"DataEmissaoRG\": \"2015-10-09T00:00:00-03:00\",\r\n            \"OrgaoEmissorRG\": \"SSP\",\r\n            \"PIS\": \"000000000000\",\r\n            \"Salario\": null,\r\n            \"Cbo\": null,\r\n            \"FiliacaoPrevidenciaSocial\": null,\r\n            \"Aposentado\": null,\r\n            \"NumerodoRegistro\": \"3101162\",\r\n            \"NexoID\": null,\r\n            \"CPF\": \"31514036894\",\r\n            \"SituacaoBeneficiario\": null,\r\n            \"CodigoRaca\": null,\r\n            \"DataInicioHistorico\": null,\r\n            \"DataFinalHistorico\": null,\r\n            \"DataInicioCargo\": null,\r\n            \"DataFinalCargo\": null,\r\n            \"DataInicioSetor\": null,\r\n            \"DataFinalSetor\": null,\r\n            \"DataInicioLotacao\": null,\r\n            \"DataFinalLotacao\": null,\r\n            \"DataInicioClassificador\": null,\r\n            \"DataFinalClassificador\": null,\r\n            \"DataInicioTurno\": null,\r\n            \"DataFinalTurno\": null,\r\n            \"DataInclusaoSistema\": \"2022-07-18T09:44:37-03:00\",\r\n            \"DataAlteracaoSistema\": \"2022-07-18T11:20:05-03:00\"\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://homologacaoapi.nexoweb.com/NexoAPIRest/api/Funcionario",
+					"protocol": "https",
+					"host": [
+						"homologacaoapi",
+						"nexoweb",
+						"com"
+					],
+					"path": [
+						"NexoAPIRest",
+						"api",
+						"Funcionario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usuario Consultar",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "zPicXt1uuLnp0aynGme3UPItOlqWMzh65tKjlwiRCkFUJwyRx7KLpq1dypBmI79Iq_OUp7XIo75h3ra_QohAarLoGhulLa9vLKNNbBllLf6RBCiCzHgSg264IO0oNEYiv15jZHSUAUgJjSK4fXzf-os2fakTmzH1LUobndWvQiCQYPS0FTOKGogv9xteAbGscuaV_IDQe6r-nfN-J2H4esKHNLnrqwX4I2zeivJgsPRZNa-vTTeatg9WRJx0fyZh6E9Z2ddCTnjICXsfFgoHImJyI2xxUZ6x4xaTWYEOpS4ftTsNxiqnP8HvtfzyErhYf812iFkeXND2L7IOyiBOwQoNqRYYkLBvB13Qxjar35ljk0R6IUlsNRe4rREZCqg1nExnh_md4N8q4yS5O3AUCV5D2TxgjGYeWbDMpgGmMx8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"Codigo\": \"testeRodrgo\",\r\n            \"CodigoEmpresa\": \"1\",\r\n            \"Nome\": \"testeRodrgo\",\r\n            \"CodigoLotacao\": \"38\",\r\n            \"Telefone\": \"11982253711Carmen,ir\",\r\n            \"CodigoSetor\": \"Seção Técnica de Saúde-2100\",\r\n            \"CodigoCargo\": \"Assistente Técnico Administrativo I-819\",\r\n            \"CodigoClassificador\": null,\r\n            \"DataAdmissao\": \"1976-10-12T00:00:00-03:00\",\r\n            \"CodigoUsuario\": null,\r\n            \"Ativo\": true,\r\n            \"CodigoTipoFuncionario\": null,\r\n            \"DataNascimento\": \"1951-07-31T00:00:00-03:00\",\r\n            \"DataDemissao\": null,\r\n            \"CarteiraDeTrabalho\": \"2973\",\r\n            \"NumeroDeSerieDaCarteiraDeTrabalho\": \"319\",\r\n            \"Sexo\": \"F\",\r\n            \"EstadoCivil\": \"SOLTEIRO\",\r\n            \"CodigoTurno\": null,\r\n            \"Contato\": null,\r\n            \"Complemento\": null,\r\n            \"Endereco\": null,\r\n            \"Numero\": null,\r\n            \"Bairro\": \"ITAIM BIBI\",\r\n            \"Cidade\": \"São Paulo\",\r\n            \"CodigoSupervisor\": null,\r\n            \"CodigoEmpresaSupervisor\": \"1\",\r\n            \"Cep\": \"04540034 \",\r\n            \"TipoSanguineo\": null,\r\n            \"EhFuncionario\": true,\r\n            \"RG\": \"5.460.715-2\",\r\n            \"Observacao\": null,\r\n            \"Email\": \"inez.macieira@unesp.br\",\r\n            \"Escolaridade\": \"Ensino Superior Completo\",\r\n            \"UfCarteiraDeTrabalho\": null,\r\n            \"MesDeReferencia\": null,\r\n            \"UfRG\": \"SP\",\r\n            \"Uf\": null,\r\n            \"NomeMae\": \"Izabel Gomes Macieira\",\r\n            \"DataDeEmissao\": null,\r\n            \"DataEmissaoRG\": \"2015-10-09T00:00:00-03:00\",\r\n            \"OrgaoEmissorRG\": \"SSP\",\r\n            \"PIS\": \"10099013778\",\r\n            \"Salario\": null,\r\n            \"Cbo\": null,\r\n            \"FiliacaoPrevidenciaSocial\": null,\r\n            \"Aposentado\": null,\r\n            \"NumerodoRegistro\": \"3101162\",\r\n            \"NexoID\": null,\r\n            \"CPF\": \"60023520825\",\r\n            \"SituacaoBeneficiario\": null,\r\n            \"CodigoRaca\": null,\r\n            \"DataInicioHistorico\": null,\r\n            \"DataFinalHistorico\": null,\r\n            \"DataInicioCargo\": null,\r\n            \"DataFinalCargo\": null,\r\n            \"DataInicioSetor\": null,\r\n            \"DataFinalSetor\": null,\r\n            \"DataInicioLotacao\": null,\r\n            \"DataFinalLotacao\": null,\r\n            \"DataInicioClassificador\": null,\r\n            \"DataFinalClassificador\": null,\r\n            \"DataInicioTurno\": null,\r\n            \"DataFinalTurno\": null,\r\n            \"DataInclusaoSistema\": \"2022-07-18T09:44:37-03:00\",\r\n            \"DataAlteracaoSistema\": \"2022-07-18T11:20:05-03:00\"\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://homologacaoapi.nexoweb.com/NexoAPIRest/api/Usuario",
+					"protocol": "https",
+					"host": [
+						"homologacaoapi",
+						"nexoweb",
+						"com"
+					],
+					"path": [
+						"NexoAPIRest",
+						"api",
+						"Usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usuario Inserir",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "zPicXt1uuLnp0aynGme3UPItOlqWMzh65tKjlwiRCkFUJwyRx7KLpq1dypBmI79Iq_OUp7XIo75h3ra_QohAarLoGhulLa9vLKNNbBllLf6RBCiCzHgSg264IO0oNEYiv15jZHSUAUgJjSK4fXzf-os2fakTmzH1LUobndWvQiCQYPS0FTOKGogv9xteAbGscuaV_IDQe6r-nfN-J2H4esKHNLnrqwX4I2zeivJgsPRZNa-vTTeatg9WRJx0fyZh6E9Z2ddCTnjICXsfFgoHImJyI2xxUZ6x4xaTWYEOpS4ftTsNxiqnP8HvtfzyErhYf812iFkeXND2L7IOyiBOwQoNqRYYkLBvB13Qxjar35ljk0R6IUlsNRe4rREZCqg1nExnh_md4N8q4yS5O3AUCV5D2TxgjGYeWbDMpgGmMx8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n            \"Codigo\": \"AA\",\r\n            \"Nome\": \"Usuário Apple\",\r\n            \"Login\": \"AA\",\r\n            \"Bloqueado\": false,\r\n            \"Ativo\": true,\r\n            \"HabSomenteControleAcesso\": false,\r\n            \"Funcao\": null,\r\n            \"Email\": null,\r\n            \"FormaDeAutenticacao\": \"PADRAO\",\r\n            \"CodigoEmpresa\": \"73\",\r\n            \"CodigoLotacao\": null,\r\n            \"DataInclusaoSistema\": \"2022-03-15T16:55:53-03:00\",\r\n            \"DataAlteracaoSistema\": \"2022-03-15T17:00:10-03:00\",\r\n            \"CargaHora\": 0,\r\n            \"HoraInicio\": \"0001-01-01T00:00:00-02:00\",\r\n            \"HoraFim\": \"0001-01-01T00:00:00-02:00\",\r\n            \"VistoNovidades\": null,\r\n            \"Foto\": null,\r\n            \"TipoUsuario\": null\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://homologacaoapi.nexoweb.com/NexoAPIRest/api/Usuario",
+					"protocol": "https",
+					"host": [
+						"homologacaoapi",
+						"nexoweb",
+						"com"
+					],
+					"path": [
+						"NexoAPIRest",
+						"api",
+						"Usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cargo Inserir",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "p4Dqx0wgXmzTaUIc1WBbuv9AyamQ0ZIxK0Tv0yAjvr3LD-09akVdse2nK2T8ftkUm63Y8QTAV_3S5fdiyoi9-QOK0Ft7RFcYjF7uKHMoA9RPzuBHgloOxvG7TYJ-SLCGnpyNfenPyxRG2Drbi_ZEG5VwmuqAq_iQkIQNTG7zqXMoflU7Z5EmBRmzVTPTu3djoLGZ0jQmtlPlWftw-CSFUiMC86YVbEX5zwTVqoAwOsevtwIzMEMHlA78Oel3H5KqL2sy8UX9__1oSqAgQ2DoYdQzgZB9eAHlFXqYTdMr2arVarY3gxt_3Pn33A9vo4KRddMCWLzP2P5l5z85zpWYa7bCaCl_X-OekzeBo0Y0m8NOgdXrh122HaiocsTZwxj9vSiXNe1mJ93yQA6WVzkUVJjndHqrqXn-IGItZreAuIY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"Codigo\": \"Auxiliar 2 de escritório-123456\",\r\n\"Nome\": \"Auxiliar de escritório\",\r\n\"Periodicidade\": null,\r\n\"CBO\": \"20328\",\r\n\"Identificador\": \"123456\",\r\n\"Ativo\": true,\r\n\"Descricao\": \"Auxiliar de escritório\",\r\n\"CodigoTipoAtividadeProfissional\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://homologacaoapi.nexoweb.com/NexoAPIRest/api/Cargo",
+					"protocol": "https",
+					"host": [
+						"homologacaoapi",
+						"nexoweb",
+						"com"
+					],
+					"path": [
+						"NexoAPIRest",
+						"api",
+						"Cargo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Setor Buscar",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "cy6pNDh9CHz4hwmVpsJc6_05uLinOv_9igE72UfXWEyitg_IB7g9q-w2YYfKn6bMKzZ3k8YB3dwUB7SiLKQrE60vRLp_hvYcSEycstK4b3ht0rIoAR7-aRBuzFyN-_h022nhFfiyLT3y4ZLhw-uCchWDCpes-dpkck-Z8H5ZZq_5Mj4S26MrabT6IJs0qYiDjgaHIfpIljvF5TejuTpbghnFvTdghpyxAB0Y3zZ9TVvf-Ud_4BbX_oG_6InCOMyT-arSTGVzoPshEebH0mwN_eVW2pRCd0CTiSqXrYj-obL2vORQpN2wIoqGGKUXtXi4owk7rcODc7G-sdsCO5OorwkeKWSmCH1h9Way8VYTeTFCJEUI5xpY5Me7a70W7lR1QJnGgeclfBt9H7KnWD5bETdailhathDzHODev-T6L2I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"Codigo\": \"Auxiliar 2 de escritório-123456\",\r\n\"Nome\": \"Auxiliar de escritório\",\r\n\"Periodicidade\": null,\r\n\"CBO\": \"20328\",\r\n\"Identificador\": \"123456\",\r\n\"Ativo\": true,\r\n\"Descricao\": \"Auxiliar de escritório\",\r\n\"CodigoTipoAtividadeProfissional\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://homologacaoapi.nexoweb.com/NexoAPIRest/api/Setor?$filter=Codigo eq '3'",
+					"protocol": "https",
+					"host": [
+						"homologacaoapi",
+						"nexoweb",
+						"com"
+					],
+					"path": [
+						"NexoAPIRest",
+						"api",
+						"Setor"
+					],
+					"query": [
+						{
+							"key": "$filter",
+							"value": "Codigo eq '3'"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lotação Buscar",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "cy6pNDh9CHz4hwmVpsJc6_05uLinOv_9igE72UfXWEyitg_IB7g9q-w2YYfKn6bMKzZ3k8YB3dwUB7SiLKQrE60vRLp_hvYcSEycstK4b3ht0rIoAR7-aRBuzFyN-_h022nhFfiyLT3y4ZLhw-uCchWDCpes-dpkck-Z8H5ZZq_5Mj4S26MrabT6IJs0qYiDjgaHIfpIljvF5TejuTpbghnFvTdghpyxAB0Y3zZ9TVvf-Ud_4BbX_oG_6InCOMyT-arSTGVzoPshEebH0mwN_eVW2pRCd0CTiSqXrYj-obL2vORQpN2wIoqGGKUXtXi4owk7rcODc7G-sdsCO5OorwkeKWSmCH1h9Way8VYTeTFCJEUI5xpY5Me7a70W7lR1QJnGgeclfBt9H7KnWD5bETdailhathDzHODev-T6L2I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"Codigo\": \"Auxiliar 2 de escritório-123456\",\r\n\"Nome\": \"Auxiliar de escritório\",\r\n\"Periodicidade\": null,\r\n\"CBO\": \"20328\",\r\n\"Identificador\": \"123456\",\r\n\"Ativo\": true,\r\n\"Descricao\": \"Auxiliar de escritório\",\r\n\"CodigoTipoAtividadeProfissional\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://homologacaoapi.nexoweb.com/NexoAPIRest/api/lotacao?$filter=Codigo eq 'teste' and CodigoEmpresa eq '2teste'",
+					"protocol": "https",
+					"host": [
+						"homologacaoapi",
+						"nexoweb",
+						"com"
+					],
+					"path": [
+						"NexoAPIRest",
+						"api",
+						"lotacao"
+					],
+					"query": [
+						{
+							"key": "$filter",
+							"value": "Codigo eq 'teste' and CodigoEmpresa eq '2teste'"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Lotação Buscar",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"Codigo\": \"Auxiliar 2 de escritório-123456\",\r\n\"Nome\": \"Auxiliar de escritório\",\r\n\"Periodicidade\": null,\r\n\"CBO\": \"20328\",\r\n\"Identificador\": \"123456\",\r\n\"Ativo\": true,\r\n\"Descricao\": \"Auxiliar de escritório\",\r\n\"CodigoTipoAtividadeProfissional\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://homologacaoapi.nexoweb.com/NexoAPIRest/api/lotacao?$filter=Codigo eq 'teste' and CodigoEmpresa eq '2teste'",
+							"protocol": "https",
+							"host": [
+								"homologacaoapi",
+								"nexoweb",
+								"com"
+							],
+							"path": [
+								"NexoAPIRest",
+								"api",
+								"lotacao"
+							],
+							"query": [
+								{
+									"key": "$filter",
+									"value": "Codigo eq 'teste' and CodigoEmpresa eq '2teste'"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; odata.metadata=minimal"
+						},
+						{
+							"key": "Server",
+							"value": "NEXO CS WEBSERVER"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "https://homologacoehs2.nexoweb.com"
+						},
+						{
+							"key": "OData-Version",
+							"value": "4.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "NEXO CS"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src https: data: 'unsafe-inline' 'unsafe-eval'"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Xss-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 16 Nov 2022 21:47:58 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "608"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"@odata.context\": \"https://homologacaoapi.nexoweb.com/NexoAPIRest/api/$metadata#Lotacao\",\n    \"value\": [\n        {\n            \"Codigo\": \"teste\",\n            \"CodigoEmpresa\": \"2teste\",\n            \"Nome\": \"Expatriados Light\",\n            \"Numero\": null,\n            \"Ativo\": false,\n            \"Logo\": null,\n            \"TipoCNPJ\": null,\n            \"CNPJ\": null,\n            \"Endereco\": null,\n            \"NumeroEndereco\": null,\n            \"Complemento\": null,\n            \"Bairro\": null,\n            \"Cidade\": null,\n            \"UF\": null,\n            \"Cep\": null,\n            \"Ddd\": null,\n            \"Telefone\": null,\n            \"ReferenciaExame\": null,\n            \"NumeroCETESB\": null,\n            \"CodigoMunicipio\": null,\n            \"CodigoMedicoCoordenador\": null,\n            \"CodigoAtividade\": null,\n            \"CodigoGrauDeRisco\": null,\n            \"CodigoClinicaPadrao\": null,\n            \"CodigoResponsavelSeguranca\": null,\n            \"CodigoNucleoDeSeguranca\": null\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Lotação Inserir",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "YIYHhT-RZIBSwpi5bJlYLrfzNanQ8E1KiiWbC1pOJcU9i2UqgjCrG6NsNureTXbWS7K9njm7yBYS_YvJsgHTdJUWJV02suHyczDMVeGsQMN89uzpniZX1lVPH6QimB1sz5rjErBZNmdaXazHgvKQ8Scff6e9Njezg-yoV_vSbBA-wxvKTaFHVRQEC1D6QBm3Q5xcQuVP7cQZvuxHGPOWD_SoBmClTAUopbXxKUw1n389g3OIoM9wJkEePBIhsN0SD2KMKZj7c2L3ZDGMCEiWFW_6VEAnm46fh923aCtYNvBep5vjO8G-bcNYxk4ffeQAqtOMlJjbi07_L47k05cYKmRZD6SEtFa3a1q4vugQr-E93fReitfXYvNGW9EFrdYGwa5NpJpSoZLkPWcEZqfgM0t2Ire8R4Uo16LZ74g4oBU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"Codigo\": \"teste\",\r\n            \"CodigoEmpresa\": \"73\",\r\n            \"Nome\": \"Expatriados\",\r\n            \"Numero\": null,\r\n            \"Ativo\": true,\r\n            \"Logo\": null,\r\n            \"TipoCNPJ\": null,\r\n            \"CNPJ\": null,\r\n            \"Endereco\": null,\r\n            \"NumeroEndereco\": null,\r\n            \"Complemento\": null,\r\n            \"Bairro\": null,\r\n            \"Cidade\": null,\r\n            \"UF\": null,\r\n            \"Cep\": null,\r\n            \"Ddd\": null,\r\n            \"Telefone\": null,\r\n            \"ReferenciaExame\": null,\r\n            \"NumeroCETESB\": null,\r\n            \"CodigoMunicipio\": null,\r\n            \"CodigoMedicoCoordenador\": null,\r\n            \"CodigoAtividade\": null,\r\n            \"CodigoGrauDeRisco\": null,\r\n            \"CodigoClinicaPadrao\": null,\r\n            \"CodigoResponsavelSeguranca\": null,\r\n            \"CodigoNucleoDeSeguranca\": null\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://homologacaoapi.nexoweb.com/NexoAPIRest/api/lotacao",
+					"protocol": "https",
+					"host": [
+						"homologacaoapi",
+						"nexoweb",
+						"com"
+					],
+					"path": [
+						"NexoAPIRest",
+						"api",
+						"lotacao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lotação Alterar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "YIYHhT-RZIBSwpi5bJlYLrfzNanQ8E1KiiWbC1pOJcU9i2UqgjCrG6NsNureTXbWS7K9njm7yBYS_YvJsgHTdJUWJV02suHyczDMVeGsQMN89uzpniZX1lVPH6QimB1sz5rjErBZNmdaXazHgvKQ8Scff6e9Njezg-yoV_vSbBA-wxvKTaFHVRQEC1D6QBm3Q5xcQuVP7cQZvuxHGPOWD_SoBmClTAUopbXxKUw1n389g3OIoM9wJkEePBIhsN0SD2KMKZj7c2L3ZDGMCEiWFW_6VEAnm46fh923aCtYNvBep5vjO8G-bcNYxk4ffeQAqtOMlJjbi07_L47k05cYKmRZD6SEtFa3a1q4vugQr-E93fReitfXYvNGW9EFrdYGwa5NpJpSoZLkPWcEZqfgM0t2Ire8R4Uo16LZ74g4oBU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"Codigo\": \"teste\",\r\n            \"CodigoEmpresa\": \"73\",\r\n            \"Nome\": \"Expatriados\",\r\n            \"Numero\": null,\r\n            \"Ativo\": false,\r\n            \"Logo\": null,\r\n            \"TipoCNPJ\": null,\r\n            \"CNPJ\": null,\r\n            \"Endereco\": null,\r\n            \"NumeroEndereco\": null,\r\n            \"Complemento\": null,\r\n            \"Bairro\": null,\r\n            \"Cidade\": null,\r\n            \"UF\": null,\r\n            \"Cep\": null,\r\n            \"Ddd\": null,\r\n            \"Telefone\": null,\r\n            \"ReferenciaExame\": null,\r\n            \"NumeroCETESB\": null,\r\n            \"CodigoMunicipio\": null,\r\n            \"CodigoMedicoCoordenador\": null,\r\n            \"CodigoAtividade\": null,\r\n            \"CodigoGrauDeRisco\": null,\r\n            \"CodigoClinicaPadrao\": null,\r\n            \"CodigoResponsavelSeguranca\": null,\r\n            \"CodigoNucleoDeSeguranca\": null\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://homologacaoapi.nexoweb.com/NexoAPIRest/api/lotacao('teste','73')",
+					"protocol": "https",
+					"host": [
+						"homologacaoapi",
+						"nexoweb",
+						"com"
+					],
+					"path": [
+						"NexoAPIRest",
+						"api",
+						"lotacao('teste','73')"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Setor Inserir",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Cw6Ro2kJGOeImA8aJpHwXWvXdR4LhS4mtaO20Ml2C9IX93EW54JWJ43jb9IVBk3ALzwM54_GllSd4XhoNJpHKeWVG_iK0CnH6KdgM_0FYQlDwUITzLjQ0Ykg0Pz5D7TxQvCYeCCmAx_GHWq_8LxzvFRBUGx9xn_cTHJ8rwNJhOTbe5sMlLQxeVPh2QC1po79eIkv7-7US1q9AuzkIgspUAAxeTQJmdg8Sf9mR0kxA1xhcgrqZ_kzpidY237ZRzczM4W1wijCw_tCVojVwif5YW0xERVzhXbAfhTK4inMpMcI4CylZw9mDetoPRZ4dZwWl-55nYpFUkeV3ZRPRTLYO4VeWE1E8AfCpouzQxJVyuwq52Uy_ZNaBc7dmxeXV6o2Cf_FORMhmo1GfHTROgGZPXr_xoq6TsdBmvyK0pFBnAM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"Codigo\": \"3\",\r\n            \"Nome\": \"A - Compras\",\r\n            \"HoraMes\": null,\r\n            \"Atividades\": null,\r\n            \"Equipamentos\": null,\r\n            \"ValidadeExames\": null,\r\n            \"Descricao\": \"A - Compras\",\r\n            \"CodigoTipoSetorDeTrabalho\": null,\r\n            \"IdentificadorSetor\": null,\r\n            \"Ativo\": true\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://homologacaoapi.nexoweb.com/RCNexoAPIRest/api/Setor",
+					"protocol": "https",
+					"host": [
+						"homologacaoapi",
+						"nexoweb",
+						"com"
+					],
+					"path": [
+						"RCNexoAPIRest",
+						"api",
+						"Setor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Setor Alterar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "YIYHhT-RZIBSwpi5bJlYLrfzNanQ8E1KiiWbC1pOJcU9i2UqgjCrG6NsNureTXbWS7K9njm7yBYS_YvJsgHTdJUWJV02suHyczDMVeGsQMN89uzpniZX1lVPH6QimB1sz5rjErBZNmdaXazHgvKQ8Scff6e9Njezg-yoV_vSbBA-wxvKTaFHVRQEC1D6QBm3Q5xcQuVP7cQZvuxHGPOWD_SoBmClTAUopbXxKUw1n389g3OIoM9wJkEePBIhsN0SD2KMKZj7c2L3ZDGMCEiWFW_6VEAnm46fh923aCtYNvBep5vjO8G-bcNYxk4ffeQAqtOMlJjbi07_L47k05cYKmRZD6SEtFa3a1q4vugQr-E93fReitfXYvNGW9EFrdYGwa5NpJpSoZLkPWcEZqfgM0t2Ire8R4Uo16LZ74g4oBU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"Codigo\": \"3\",\r\n            \"Nome\": \"A - Compras Alterado\",\r\n            \"HoraMes\": null,\r\n            \"Atividades\": null,\r\n            \"Equipamentos\": null,\r\n            \"ValidadeExames\": null,\r\n            \"Descricao\": \"A - Compras Alterado\",\r\n            \"CodigoTipoSetorDeTrabalho\": null,\r\n            \"IdentificadorSetor\": null,\r\n            \"Ativo\": true\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://homologacaoapi.nexoweb.com/NexoAPIRest/api/Setor('3')",
+					"protocol": "https",
+					"host": [
+						"homologacaoapi",
+						"nexoweb",
+						"com"
+					],
+					"path": [
+						"NexoAPIRest",
+						"api",
+						"Setor('3')"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lotacao Inserir",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "P3bQwj4BbumJoVJuWOkgUODCVBHt6dDkLWZXcTl3Uc4jfrYi9A0Kyq4sFdlWpw402G8oTr64LKIQpN_Kg7ZrmlZGYm9Rs-1iaoEmAjWsC0FmtqLWOAQAgxAPYRJj_KPPPugIQnC8zKskRfZI14hQHc2k59ayUn0XEwEUhSlCrSSbvtBwvRiuARnoZthiVTvsFMrz7dHBOsww1_p0rriB_m92T8aLFo7GNdNK-0LlbwLp2nF6Ly4d2mG8ppRz5GyszdIrEYQhxyN4GBaYtAjPXYZ-eEiaoflO53PRhf8kz7YpIiyAkaTX63zGk9TFnnv1_J3ySqoHBas_zJddyxrDBQyY5gleHj_5H3fIhcWQjhzhJUyNCsTjV94BrRVKT-c53NB0cx-jozBa5O_-p6IcPkIuf9oM1e8G3Yriz3osCQQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"Codigo\": \"10\",\r\n            \"CodigoEmpresa\": \"1\",\r\n            \"Nome\": \"Faculdade de Medicina Veterinária e Zootecnia\",\r\n            \"Numero\": \"20\",\r\n            \"Ativo\": true,\r\n            \"Logo\": null,\r\n            \"TipoCNPJ\": \"CNPJ\",\r\n            \"CNPJ\": \"48031918002097\",\r\n            \"Endereco\": \"enderecoTeste, s\\n\",\r\n            \"NumeroEndereco\": null,\r\n            \"Complemento\": null,\r\n            \"Bairro\": null,\r\n            \"Cidade\": \"Botucatu\",\r\n            \"UF\": \"SP\",\r\n            \"Cep\": \"18618681\",\r\n            \"Ddd\": \"14\",\r\n            \"Telefone\": \"38802150\",\r\n            \"ReferenciaExame\": null,\r\n            \"NumeroCETESB\": null,\r\n            \"CodigoMunicipio\": null,\r\n            \"CodigoMedicoCoordenador\": null,\r\n            \"CodigoAtividade\": null,\r\n            \"CodigoGrauDeRisco\": null,\r\n            \"CodigoClinicaPadrao\": null,\r\n            \"CodigoResponsavelSeguranca\": null,\r\n            \"CodigoNucleoDeSeguranca\": null\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://homologacaoapi.nexoweb.com/NexoAPIRest/api/Lotacao",
+					"protocol": "https",
+					"host": [
+						"homologacaoapi",
+						"nexoweb",
+						"com"
+					],
+					"path": [
+						"NexoAPIRest",
+						"api",
+						"Lotacao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lotacao Buscar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "P3bQwj4BbumJoVJuWOkgUODCVBHt6dDkLWZXcTl3Uc4jfrYi9A0Kyq4sFdlWpw402G8oTr64LKIQpN_Kg7ZrmlZGYm9Rs-1iaoEmAjWsC0FmtqLWOAQAgxAPYRJj_KPPPugIQnC8zKskRfZI14hQHc2k59ayUn0XEwEUhSlCrSSbvtBwvRiuARnoZthiVTvsFMrz7dHBOsww1_p0rriB_m92T8aLFo7GNdNK-0LlbwLp2nF6Ly4d2mG8ppRz5GyszdIrEYQhxyN4GBaYtAjPXYZ-eEiaoflO53PRhf8kz7YpIiyAkaTX63zGk9TFnnv1_J3ySqoHBas_zJddyxrDBQyY5gleHj_5H3fIhcWQjhzhJUyNCsTjV94BrRVKT-c53NB0cx-jozBa5O_-p6IcPkIuf9oM1e8G3Yriz3osCQQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://homologacaoapi.nexoweb.com/NexoAPIRest/api/Lotacao",
+					"protocol": "https",
+					"host": [
+						"homologacaoapi",
+						"nexoweb",
+						"com"
+					],
+					"path": [
+						"NexoAPIRest",
+						"api",
+						"Lotacao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Empresa Buscar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "OcV7woqikC6BHDtvGTTAaZFjuppmsg8KqdvmVZkqvxRu4eSAzhRwlW9KAjn4bMu5fLQXNi7I-4dNoTs8-ixfdvgaH5qYK_84NSAL3unwQsEGt9h0ptmVhVsBoZNqefciemqwrG5YNpKltK28PB0VqGv77XIGUe-qW7-VpZaU_RlCqbUsx2YihOSIPnPNfwF_inZ65Zm3bFsso1F9r_YzhzWPqEEHXAN8YuBkbbrgJ1ksnAa0kaf6EYqVmI41pPsLrgF1RXH3MIjl3uNApQVuFz7UByf2QEXAgXpej8GFiS7KUH8jVMyBZ2G6Bh1F0qu8LSzkRW57mqLOxGgTZfqBuoCdP9upny0Zyt6pnEqBIvvTMXtspXMcsJo3KCZ9tU9ko5_geqrtGttwJlCC4VrJxgzlBTlx1_G7ACCNnkUn5rI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://homologacaoapi.nexoweb.com/NexoAPIRest/api/empresa?$filter=Codigo eq 'N001'",
+					"protocol": "https",
+					"host": [
+						"homologacaoapi",
+						"nexoweb",
+						"com"
+					],
+					"path": [
+						"NexoAPIRest",
+						"api",
+						"empresa"
+					],
+					"query": [
+						{
+							"key": "$filter",
+							"value": "Codigo eq 'N001'"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Empresa Inserir",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "3Bh3wjUof6f6MZks1G3wXhr73ghlztF38VHZ3afF12EWNxVmc4eeG4UhffCnw171Voemvst8cJptwsyyN1lyytkBl4IdRcG5hRaVD2RWXSmG9kZeArvdiXnJRkP-GO_b9LOIWPbC9lR2yiphEB2CvDLqXW3eizVGbZnmBsPhi83JvRd74XpPK0nj8zOmNzzdaP9ARHO9mxnXAEBG2nXHDF_mBQrPkIiSYFziiN_ewgStBZJHGu-RntnRM8zz-7bi77hiFc6g5sJ3r7Y6MTJ00Xvzm34szZYLwC9tg9ZJZ2YBiF-HdYtDrkBquIOpmgvNkDJSqmBwYGNlcv_1NbGxTe55AhmIyPEFNQaunQPJYB3OBPCoMtiWXOzXk9v54UkWUqXF9PU7To1QIs3My6nAkl33eHs_vLnq637sCv-EUWw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"Codigo\": \"1teste\",\r\n            \"Nome\": \"Nexo Cs Informatica - SP\",\r\n            \"CodigoGrauDeRisco\": null,\r\n            \"Associado\": true,\r\n            \"CodigoAtividade\": \"8542-2/00\",\r\n            \"NomeFantasia\": \"Nexo Cs Informatica - SP\",\r\n            \"InscricaoEstadual\": null,\r\n            \"Ddd1\": \"11\",\r\n            \"Telefone1\": \"36771210\",\r\n            \"Ddd2\": null,\r\n            \"Telefone2\": null,\r\n            \"Endereco\": \"Rua Candido Espinheira\",\r\n            \"Numero\": 1000,\r\n            \"Complemento\": \"7º Andar\",\r\n            \"Bairro\": \"Perdizes\",\r\n            \"Cidade\": \"São Paulo\",\r\n            \"Estado\": \"SP\",\r\n            \"Cep\": \"06950-000\",\r\n            \"CNPJ\": \"01023164000288\",\r\n            \"Desativada\": true,\r\n            \"Email\": null,\r\n            \"CodigoNucleoDeAtendimento\": null,\r\n            \"TipoCnpj\": \"CNPJ\",\r\n            \"referenciaDeProgramacaoExame\": \"ULTIMO EXAME\",\r\n            \"CodigoClinicaPadrao\": null,\r\n            \"CodigoResponsavelSeguranca\": null,\r\n            \"CodigoMedicoCoordenador\": null,\r\n            \"DataInicioHistoricoMedicoCoordenador\": null,\r\n            \"DataFimHistoricoMedicoCoordenador\": null,\r\n            \"Imagem\": null\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://homologacaoapi.nexoweb.com/NexoAPIRest/api/empresa",
+					"protocol": "https",
+					"host": [
+						"homologacaoapi",
+						"nexoweb",
+						"com"
+					],
+					"path": [
+						"NexoAPIRest",
+						"api",
+						"empresa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Empresa Alterar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "3Bh3wjUof6f6MZks1G3wXhr73ghlztF38VHZ3afF12EWNxVmc4eeG4UhffCnw171Voemvst8cJptwsyyN1lyytkBl4IdRcG5hRaVD2RWXSmG9kZeArvdiXnJRkP-GO_b9LOIWPbC9lR2yiphEB2CvDLqXW3eizVGbZnmBsPhi83JvRd74XpPK0nj8zOmNzzdaP9ARHO9mxnXAEBG2nXHDF_mBQrPkIiSYFziiN_ewgStBZJHGu-RntnRM8zz-7bi77hiFc6g5sJ3r7Y6MTJ00Xvzm34szZYLwC9tg9ZJZ2YBiF-HdYtDrkBquIOpmgvNkDJSqmBwYGNlcv_1NbGxTe55AhmIyPEFNQaunQPJYB3OBPCoMtiWXOzXk9v54UkWUqXF9PU7To1QIs3My6nAkl33eHs_vLnq637sCv-EUWw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"Codigo\": \"1teste\",\r\n            \"Nome\": \"Nexo Cs Informatica - SP\",\r\n            \"CodigoGrauDeRisco\": null,\r\n            \"Associado\": true,\r\n            \"CodigoAtividade\": \"8542-2/00\",\r\n            \"NomeFantasia\": \"Nexo Cs Informatica - SP\",\r\n            \"InscricaoEstadual\": null,\r\n            \"Ddd1\": \"11\",\r\n            \"Telefone1\": \"36771210\",\r\n            \"Ddd2\": null,\r\n            \"Telefone2\": null,\r\n            \"Endereco\": \"Rua Candido Espinheira\",\r\n            \"Numero\": 1000,\r\n            \"Complemento\": \"7º Andar\",\r\n            \"Bairro\": \"Perdizes\",\r\n            \"Cidade\": \"São Paulo\",\r\n            \"Estado\": \"SP\",\r\n            \"Cep\": \"06950-000\",\r\n            \"CNPJ\": \"01023164000288\",\r\n            \"Desativada\": false,\r\n            \"Email\": null,\r\n            \"CodigoNucleoDeAtendimento\": null,\r\n            \"TipoCnpj\": \"CNPJ\",\r\n            \"referenciaDeProgramacaoExame\": \"ULTIMO EXAME\",\r\n            \"CodigoClinicaPadrao\": null,\r\n            \"CodigoResponsavelSeguranca\": null,\r\n            \"CodigoMedicoCoordenador\": null,\r\n            \"DataInicioHistoricoMedicoCoordenador\": null,\r\n            \"DataFimHistoricoMedicoCoordenador\": null,\r\n            \"Imagem\": null\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://homologacaoapi.nexoweb.com/NexoAPIRest/api/empresa('1teste')",
+					"protocol": "https",
+					"host": [
+						"homologacaoapi",
+						"nexoweb",
+						"com"
+					],
+					"path": [
+						"NexoAPIRest",
+						"api",
+						"empresa('1teste')"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cargo consultar",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Q7QPK8gN-G5wZb_SkQ0zlog20GMZfkjHRMVFymeXbFepxnvDy7FRwzF4KWb_cv_DEP15xTMvrBcvBtmVvakxAG437jt6_gpn38chJN-T_s2ExQ7xHcIJ8JYSoarRG6lO2wxneUZwAdsC6VTIwpwd7Ior7VYwQkOeUVe5oQDJQCXn0Xjm3hOWke0vjJ8Sods6gAVO89Q43y8XKaKTkfYDGtw_qnkA6u-r4VK4A_JNQopSKldhJe2BYi2BZj6nxWL3j-Q4vw-rlHPxLcxVAHKtppAHlvFd9V2pTlk160Jhz7H0wuYPNNZGW2dHU6woUJsB-kOyX-pUcPGdBKLOtWfOQ1WMoaKpHGKhoTB5MeypwKN6uvbaKZCX4OCl4RQ2NdSulqPIHB1lkwAqlBJWSAbDHOtouBYfdJw7_56vZuNQFb0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"Codigo\": \"Auxiliar de escritório-123456\",\r\n\"Nome\": \"Auxiliar de escritório\",\r\n\"Periodicidade\": null,\r\n\"CBO\": \"20328\",\r\n\"Identificador\": \"123456\",\r\n\"Ativo\": true,\r\n\"Descricao\": \"Auxiliar de escritório\",\r\n\"CodigoTipoAtividadeProfissional\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://homologacaoapi.nexoweb.com/NexoAPIRest/api/Cargo?$filter=Identificador eq '123456'",
+					"protocol": "https",
+					"host": [
+						"homologacaoapi",
+						"nexoweb",
+						"com"
+					],
+					"path": [
+						"NexoAPIRest",
+						"api",
+						"Cargo"
+					],
+					"query": [
+						{
+							"key": "$filter",
+							"value": "Identificador eq '123456'"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cargo Alterar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "p4Dqx0wgXmzTaUIc1WBbuv9AyamQ0ZIxK0Tv0yAjvr3LD-09akVdse2nK2T8ftkUm63Y8QTAV_3S5fdiyoi9-QOK0Ft7RFcYjF7uKHMoA9RPzuBHgloOxvG7TYJ-SLCGnpyNfenPyxRG2Drbi_ZEG5VwmuqAq_iQkIQNTG7zqXMoflU7Z5EmBRmzVTPTu3djoLGZ0jQmtlPlWftw-CSFUiMC86YVbEX5zwTVqoAwOsevtwIzMEMHlA78Oel3H5KqL2sy8UX9__1oSqAgQ2DoYdQzgZB9eAHlFXqYTdMr2arVarY3gxt_3Pn33A9vo4KRddMCWLzP2P5l5z85zpWYa7bCaCl_X-OekzeBo0Y0m8NOgdXrh122HaiocsTZwxj9vSiXNe1mJ93yQA6WVzkUVJjndHqrqXn-IGItZreAuIY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"Codigo\": \"teste14102022\",\r\n\"Nome\": \"Aux. de escritório ---TESTE\",\r\n\"Periodicidade\": null,\r\n\"CBO\": \"20328\",\r\n\"Identificador\": \"123456\",\r\n\"Ativo\": false,\r\n\"Descricao\": \"Auxiliar de escritório\",\r\n\"CodigoTipoAtividadeProfissional\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://homologacaoapi.nexoweb.com/NexoAPIRest/api/Cargo('teste14102022')",
+					"protocol": "https",
+					"host": [
+						"homologacaoapi",
+						"nexoweb",
+						"com"
+					],
+					"path": [
+						"NexoAPIRest",
+						"api",
+						"Cargo('teste14102022')"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Funcionarios Buscar",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "4RvyD8YUGEV6YsZMUts4AeD1TbA08VFVKtA_AcaN0wgxC3dP6-nIccpOXxUROVS957_kh3tgy3gM99qXowHxpexeyE6Mke4u8iHTo9Q5FBjJ9SEh7hKLhS6kPLin4FEW6QWjEH7r8EHC5QhrxsvQCukBvIq-W3DVCKibvZ3c4pTMn7c3mHH6wohq7ShjB_be5VGvrd3HR0B_4trVRt_qwoaDGwS5pRe7CSBrfcaRiwO_1UaImDi97KwJFFYOcDuOTglfQKWIzJq8EYYasA4kFXhVt4O5I1QFTCLMJjcCqgeVMtPB6WL9lHqynD83KTMAHHto_Y80S6vsTO1dlDy8XoWQ2YFc4R1mXmcdzd8xTJzqkaTEIco-xa5qAA6c8-C9LsLS42pWgeF1Mto_7bo6Levd1xVEpPL3R16BqsV4hGg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n            \"Codigo\": \"teste230301\",\r\n            \"CodigoEmpresa\": \"73\",\r\n            \"CodigoLotacao\": null,\r\n            \"CodigoSetor\": \"Administrativo\",\r\n            \"CodigoCargo\": \"Analista Administrativo Júnior / Financeiro\",\r\n            \"CodigoClassificador\": null,\r\n            \"DataInicioHistorico\": \"2000-01-00:00:00-00:00\",\r\n            \"DataFinalHistorico\": null,\r\n            \"DataInicioCargo\": null,\r\n            \"DataFinalCargo\": null,\r\n            \"DataInicioSetor\": null,\r\n            \"DataFinalSetor\": null,\r\n            \"DataInicioLotacao\": null,\r\n            \"DataFinalLotacao\": null,\r\n            \"DataInicioClassificador\": null,\r\n            \"DataFinalClassificador\": null,\r\n            \"DataInicioTurno\": null,\r\n            \"DataFinalTurno\": null,\r\n            \"DataInclusaoSistema\": \"2021-11-29T10:58:41-03:00\",\r\n            \"DataAlteracaoSistema\": \"2022-01-25T07:54:06-03:00\"\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://homologacaoapi.nexoweb.com/NexoAPIRest/api/funcionario",
+					"protocol": "https",
+					"host": [
+						"homologacaoapi",
+						"nexoweb",
+						"com"
+					],
+					"path": [
+						"NexoAPIRest",
+						"api",
+						"funcionario"
+					],
+					"query": [
+						{
+							"key": "$filter",
+							"value": "Codigo eq 'TESTE3'",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Funcionario Atualizar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "VHCVxNyv95xfRgqyLYqbKUOk2dU8ua1xxzatMb5Jzw3zseVDtj4OYBpmJR0jSmR92Q8aCUhgkW91mTRYsc9ZMpyN6reGCl_pSb-lbflcUbzwaJWe28jMErhEL6o9qofWESUS7pCUdcyiz4DK6T1LcyiPa03wTEoeE6rgn2RlLahgbPjQ8oa28d3HrlhQMtgCERfeGGdXAdZ6PZ4YoA1UwWV9uFggJmko5FTDifbAXhx9f9fNGh1SFihnf4eRe14OeeWKTmdsjsqFZTu0XoN5QuGgOYM_qEqwexLKcbCSz5mLMwJn06H7lI1DgkaH09yOUnpVhLnu3B7aKunibaE0pfQ4bVZueQImXQgGu6UhHnY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"Codigo\": \"TESTE3\",\r\n            \"CodigoEmpresa\": \"2\",\r\n            \"Nome\": \"ADRIANA SANTOS\",\r\n            \"CodigoLotacao\": \"1\",\r\n            \"Telefone\": null,\r\n            \"CodigoSetor\": \"Pedagogia\",\r\n            \"CodigoCargo\": \"Coordenador(a) Pedagofico(a)\",\r\n            \"CodigoClassificador\": null,\r\n            \"DataAdmissao\": \"2017-12-13T00:00:00-02:00\",\r\n            \"CodigoUsuario\": null,\r\n            \"Ativo\": true,\r\n            \"CodigoTipoFuncionario\": null,\r\n            \"DataNascimento\": \"1978-09-13T00:00:00-03:00\",\r\n            \"DataDemissao\": null,\r\n            \"CarteiraDeTrabalho\": null,\r\n            \"NumeroDeSerieDaCarteiraDeTrabalho\": null,\r\n            \"Sexo\": \"\",\r\n            \"EstadoCivil\": null,\r\n            \"CodigoTurno\": null,\r\n            \"Contato\": null,\r\n            \"Complemento\": null,\r\n            \"Endereco\": null,\r\n            \"Numero\": null,\r\n            \"Bairro\": null,\r\n            \"Cidade\": null,\r\n            \"CodigoSupervisor\": null,\r\n            \"CodigoEmpresaSupervisor\": null,\r\n            \"Cep\": null,\r\n            \"TipoSanguineo\": null,\r\n            \"EhFuncionario\": true,\r\n            \"RG\": null,\r\n            \"Observacao\": null,\r\n            \"Email\": \"cpereira@nexocs.com\",\r\n            \"Escolaridade\": null,\r\n            \"UfCarteiraDeTrabalho\": null,\r\n            \"MesDeReferencia\": null,\r\n            \"UfRG\": null,\r\n            \"Uf\": null,\r\n            \"NomeMae\": null,\r\n            \"DataDeEmissao\": null,\r\n            \"DataEmissaoRG\": null,\r\n            \"OrgaoEmissorRG\": null,\r\n            \"PIS\": null,\r\n            \"Salario\": null,\r\n            \"Cbo\": null,\r\n            \"FiliacaoPrevidenciaSocial\": null,\r\n            \"Aposentado\": null,\r\n            \"NumerodoRegistro\": null,\r\n            \"NexoID\": \"3469\",\r\n            \"CPF\": \"12345678906\",\r\n            \"SituacaoBeneficiario\": null,\r\n            \"CodigoRaca\": null,\r\n            \"DataInicioHistorico\": null,\r\n            \"DataFinalHistorico\": null,\r\n            \"DataInicioCargo\": null,\r\n            \"DataFinalCargo\": null,\r\n            \"DataInicioSetor\": null,\r\n            \"DataFinalSetor\": null,\r\n            \"DataInicioLotacao\": null,\r\n            \"DataFinalLotacao\": null,\r\n            \"DataInicioClassificador\": null,\r\n            \"DataFinalClassificador\": null,\r\n            \"DataInicioTurno\": null,\r\n            \"DataFinalTurno\": null,\r\n            \"DataInclusaoSistema\": \"2021-01-25T13:30:27-03:00\",\r\n            \"DataAlteracaoSistema\": \"2022-01-25T07:54:05-03:00\"\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://homologacaoapi.nexoweb.com/NexoAPIRest/api/Funcionario('2','TESTE3')",
+					"protocol": "https",
+					"host": [
+						"homologacaoapi",
+						"nexoweb",
+						"com"
+					],
+					"path": [
+						"NexoAPIRest",
+						"api",
+						"Funcionario('2','TESTE3')"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Funcionario Historico",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "jZ06o0dSR9SSK2QfR9MbDsr6eDdeSlwuSvIni_rbDeQZA3U0trN3Var3uNHxnXGruh2vwsAIuSV2ywe_5SDadeQHZdGbER36rZVeqe7KTqb4VraHJ1VDI3klTnDVe-Oujk1C3VMQ46k_dJiAIrPPweoW2au3J-Y_aycsnjM57NNSzTSUWc7bz8eJDRq9XBMGcTbLYHf-glYw8S5HQwEEqSs-HYCeext6q62SxRyRhvuPwn2bYt3NXqeWF_HlLbEH56hbcpLjtWA6KcMBwWE3zgqfkwWgP24N1NMbx5TY0lGWeqVfudQjnXHZt7RsBPX1GXya_jAhnZXsok8U_3LHom5yNb2XmtJ2zh67FkyuOtimSiZJn3yEMyH5FPXYtWj4kJyCNi7BDJymd5ONLjgjlXMRT1RUSCW_DFexBtSXEbY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Codigo\": \"testeRodrgo\",\r\n    \"CodigoEmpresa\": \"1\",\r\n    \"CodigoLotacao\": \"38\",\r\n    \"CodigoSetor\": \"Seção Técnica de Saúde-2100\",\r\n    \"CodigoCargo\": \"Assistente Técnico Administrativo I-819\",\r\n    \"CodigoClassificador\": null,\r\n    \"CodigoTurno\": null,\r\n    \"DataInicioHistorico\": \"2009-01-01\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://homologacaoapi.nexoweb.com/NexoAPIRest/api/Funcionario('1','testeRodrgo')",
+					"protocol": "https",
+					"host": [
+						"homologacaoapi",
+						"nexoweb",
+						"com"
+					],
+					"path": [
+						"NexoAPIRest",
+						"api",
+						"Funcionario('1','testeRodrgo')"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PedidoDeExame Inserir",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "TKBouEVfp60wZUrvr5-RWA4ZOnhJWW8bHQVTI4OlrQdrFh4L1JjgpMZymBgkOA3rgyhlPdMqSoMwloSP9vxQL2QxgNPeR1qBVzS0Ro03kU_ZBvt24QtmKqUenQ6gle3AuoMiDfhnA4jcOAPi935aXjEsSgxYYa_gIMD4pXTUtPIpavbNI4McRMJPl9uELv6YraSID_buDLxVNSFtRN70NoOJwbyk4qpZZ1TWxNu42bnziAp_pXfIAts4bL3dKNNvovdIs9Wmlzg8Xob7_s34FaXBoJgi45wMWL8eFrUZMDEhGTjBEyfK2bCHsHj8Gbm2Rz67uS5-60jkCyFbLeMuWVX8WFeg_bEaUqeGeZIAm_E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"CodigoFuncionario\": \"1895\",\r\n  \"CodigoEmpresa\": \"2\",\r\n  \"DataExame\": \"2019-03-23T13:15:30.215Z\",\r\n  \"CodigoExame\": \"C001\",\r\n  \"CodigoExameASO\": null,\r\n  \"CodigoMedico\": \"82\",\r\n  \"CodigoClinica\": \"001\",\r\n  \"Validade\": 12,\r\n  \"Resultado\": null,\r\n  \"Observacao\": null,\r\n  \"Origem\": null,\r\n  \"DataRealizacao\": \"2019-03-23T13:15:30.215Z\",\r\n  \"Cancelado\": false,\r\n  \"CodigoUsuarioCancelamento\": null,\r\n  \"DataCancelamento\": null,\r\n  \"ObservacaoCancelamento\": null,\r\n  \"CodigoClinicaDeOrigem\": null,\r\n  \"CodigoTipoExame\": \"02\",\r\n  \"ValidadePedido\": 0,\r\n  \"DataFimPedido\": \"2022-03-23T13:15:30.215Z\",\r\n  \"DataProximoExame\": \"2022-03-23T13:15:30.215Z\",\r\n  \"DataResultado\": \"2022-03-23T13:15:30.215Z\",\r\n  \"HoraRealizacao\": \"2022-03-23T13:15:30.215Z\",\r\n  \"CodigoTipoParecer\": \"006\",\r\n  \"EnviaResultadoAoEsocial\": true,\r\n  \"DataInclusaoSistema\": \"2022-03-23T13:15:30.215Z\",\r\n  \"DataAlteracaoSistema\": \"2022-03-23T13:15:30.215Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://homologacaoapi.nexoweb.com/NexoAPIRest/api/PedidoDeExame",
+					"protocol": "https",
+					"host": [
+						"homologacaoapi",
+						"nexoweb",
+						"com"
+					],
+					"path": [
+						"NexoAPIRest",
+						"api",
+						"PedidoDeExame"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EntregaDeEPI",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "8vfLnG1M1_QcZ4xLb4wdsUDjySsbI83T63tF_Z5KuM8ISjZgT97Ibfwj9oWzZo8EG8i4s9tiFTvCBpU0sW2VtbGa8LS3VlNu7arpWCwx0uvu7nJwSSAzu2KyWfleFVKEjkmQIkXdSKBoxS7sru9cDCadzk_st5TaHNaZ9rZr8kRMBXo1-_XAP3B8PnwLhtHLnDcRbYgPr_9zg0hk94aPzSlkgZCX4cHNdpSVL8xrzp_-h3uQ0nnVYcgbvS9sqDBnyCOwr930MTZ7kN9RUrf65nhWWptqTIJ4c9OQ9B_4agKO1l98hN9rHNOGNUL182nqtuk04PfxAyeTH9YKse8IR2wheZYbTb0pYZ-ixopdQeQLFJdMElK1ROltUjSAgy9abPxuiYkUolApd63tyboZh_d2H6-qS2wOJg740o7G00o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{           \"Identificador\": 0,\r\n            \"TipoEntrega\": \"Senha\",\r\n            \"Quantidade\": 2,\r\n            \"CodigoReferencia\": null,\r\n            \"Requisitante\": \"ABEL SATURNINO\",\r\n            \"IdLote\": null,\r\n            \"ValidadeDias\": 365,\r\n            \"ValidadeDiasOriginal\": null,\r\n            \"DataEntrega\": \"2022-04-26T00:00:00-03:00\",\r\n            \"DataDevolucao\": null,\r\n            \"DataValidade\": \"2022-04-26T00:00:00-03:00\",\r\n            \"DataValidadeOriginal\": null,\r\n            \"CA\": \"19234\",\r\n            \"CAI\": null,\r\n            \"CRF\": null,\r\n            \"Cancelado\": false,\r\n            \"HoraEntrega\": null,\r\n            \"HoraDevolucao\": null,\r\n            \"DataCancelamento\": null,\r\n            \"JustificativaCancelamento\": null,\r\n            \"ValidadeEnsaio\": null,\r\n            \"DataUltimoEnsaio\": null,\r\n            \"DataProximoEnsaio\": null,\r\n            \"Senha\": null,\r\n            \"CodigoEmpresa\": \"100\",\r\n            \"CodigoFuncionario\": \"21659\",\r\n            \"CodigoLotacao\": \"LJLE\",\r\n            \"CodigoSetor\": \"M015584\",\r\n            \"CodigoCargo\": \"60060732\",\r\n            \"CodigoClassificador\": null,\r\n            \"CodigoEPI\": \"1010828\",\r\n            \"IdEpi\": 2,\r\n            \"IdEspecificacao\": \"0\",\r\n            \"IdMotivoDevolucao\": 0,\r\n            \"CodigoUsuario\": \"USU1\",\r\n            \"CodigoFabricante\": null,\r\n            \"IdGrupoEntrega\": \"G001\",\r\n            \"IdGrupoDevolucao\": 0,\r\n            \"IdSolicitacaoDeAutorizacao\": 0,\r\n            \"IdGrupoImagens\": 0,\r\n            \"CodigoTestemunha\": null,\r\n            \"CodigoEmpresaTestemunha\": null,\r\n            \"SenhaTestemunha\": null,\r\n            \"SenhaTermo\": null,\r\n            \"CodigoUsuarioCancelamento\": \"USU1\",\r\n            \"TermoDeAceite\": null,\r\n            \"Aceitar\": false,\r\n            \"IdDeposito\": null,\r\n            \"CodigoFabricanteDeProtecao\": null,\r\n            \"AssinarComSenha\": false\r\n\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://homologacaoapi.nexoweb.com/NexoAPIRest/api/EntregaDeEPI",
+					"protocol": "https",
+					"host": [
+						"homologacaoapi",
+						"nexoweb",
+						"com"
+					],
+					"path": [
+						"NexoAPIRest",
+						"api",
+						"EntregaDeEPI"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EntregaDeEPI",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "4tJbcxH2-olDof5F4cJlf5xmKEbtj6WR3xCIl9ZE_dVYpLQUJCmeDcW80qyvjZIqhiOSEEmC0YO1JImqEIzGA_koHhcAfd8ogATeritUg7xBG1SXy6OhFzdj17_2ScP2FENMKAHbtsKlCm9Zs8GHbJlSR-Z5I1FZd4U4iMTto_UP7Iht5s0nLbllw5INZBnCiLsk2HH5fG8O-pK18rTl00NQrMS2oXgGyymZV1F6QoTUOdxg2FfsDsihPuoMnUJcgDX086pqCb3fbuAIXm-z--GubAsVK8rorMM86h3ya78C-beYtaRiZ06Us-LZTIxi52NgPDrj0Mcsxkt4r2ICrv3CFiRZwklPczBHp4sXkxX4fLSo6KiMfONykjBfaqZWs7WGvp5EVyNTBYIswnJn1W4-21yGvXGjlEOZ46YFvdQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://homologacaoapi.nexoweb.com/NexoAPIRest/api/EntregaDeEPI",
+					"protocol": "https",
+					"host": [
+						"homologacaoapi",
+						"nexoweb",
+						"com"
+					],
+					"path": [
+						"NexoAPIRest",
+						"api",
+						"EntregaDeEPI"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PedidoDeExame Buscar",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "VHCVxNyv95xfRgqyLYqbKUOk2dU8ua1xxzatMb5Jzw3zseVDtj4OYBpmJR0jSmR92Q8aCUhgkW91mTRYsc9ZMpyN6reGCl_pSb-lbflcUbzwaJWe28jMErhEL6o9qofWESUS7pCUdcyiz4DK6T1LcyiPa03wTEoeE6rgn2RlLahgbPjQ8oa28d3HrlhQMtgCERfeGGdXAdZ6PZ4YoA1UwWV9uFggJmko5FTDifbAXhx9f9fNGh1SFihnf4eRe14OeeWKTmdsjsqFZTu0XoN5QuGgOYM_qEqwexLKcbCSz5mLMwJn06H7lI1DgkaH09yOUnpVhLnu3B7aKunibaE0pfQ4bVZueQImXQgGu6UhHnY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n            \"Codigo\": \"teste230301\",\r\n            \"CodigoEmpresa\": \"73\",\r\n            \"Nome\": \"ALLISON PADOVAN\",\r\n            \"CodigoLotacao\": null,\r\n            \"Telefone\": null,\r\n            \"CodigoSetor\": \"Administrativo\",\r\n            \"CodigoCargo\": \"Analista Administrativo Júnior / Financeiro\",\r\n            \"CodigoClassificador\": null,\r\n            \"DataAdmissao\": \"0001-01-01T00:00:00-02:00\",\r\n            \"CodigoUsuario\": null,\r\n            \"Ativo\": true,\r\n            \"CodigoTipoFuncionario\": null,\r\n            \"DataNascimento\": \"1980-01-01T00:00:00-02:00\",\r\n            \"DataDemissao\": null,\r\n            \"CarteiraDeTrabalho\": null,\r\n            \"NumeroDeSerieDaCarteiraDeTrabalho\": null,\r\n            \"Sexo\": \"F\",\r\n            \"EstadoCivil\": null,\r\n            \"CodigoTurno\": null,\r\n            \"Contato\": null,\r\n            \"Complemento\": null,\r\n            \"Endereco\": null,\r\n            \"Numero\": null,\r\n            \"Bairro\": null,\r\n            \"Cidade\": null,\r\n            \"CodigoSupervisor\": null,\r\n            \"CodigoEmpresaSupervisor\": null,\r\n            \"Cep\": null,\r\n            \"TipoSanguineo\": null,\r\n            \"EhFuncionario\": false,\r\n            \"RG\": \"25415421414\",\r\n            \"Observacao\": null,\r\n            \"Email\": \"cpereira@nexocs.com\",\r\n            \"Escolaridade\": null,\r\n            \"UfCarteiraDeTrabalho\": null,\r\n            \"MesDeReferencia\": null,\r\n            \"UfRG\": null,\r\n            \"Uf\": null,\r\n            \"NomeMae\": null,\r\n            \"DataDeEmissao\": null,\r\n            \"DataEmissaoRG\": null,\r\n            \"OrgaoEmissorRG\": null,\r\n            \"PIS\": null,\r\n            \"Salario\": null,\r\n            \"Cbo\": null,\r\n            \"FiliacaoPrevidenciaSocial\": null,\r\n            \"Aposentado\": null,\r\n            \"NumerodoRegistro\": null,\r\n            \"NexoID\": \"9270\",\r\n            \"CPF\": \"26921818837\",\r\n            \"SituacaoBeneficiario\": null,\r\n            \"CodigoRaca\": null,\r\n            \"DataInicioHistorico\": null,\r\n            \"DataFinalHistorico\": null,\r\n            \"DataInicioCargo\": null,\r\n            \"DataFinalCargo\": null,\r\n            \"DataInicioSetor\": null,\r\n            \"DataFinalSetor\": null,\r\n            \"DataInicioLotacao\": null,\r\n            \"DataFinalLotacao\": null,\r\n            \"DataInicioClassificador\": null,\r\n            \"DataFinalClassificador\": null,\r\n            \"DataInicioTurno\": null,\r\n            \"DataFinalTurno\": null,\r\n            \"DataInclusaoSistema\": \"2021-11-29T10:58:41-03:00\",\r\n            \"DataAlteracaoSistema\": \"2022-01-25T07:54:06-03:00\"\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://homologacaoapi.nexoweb.com/NexoAPIRest/api/PedidoDeExame?$filter=Codigo eq '282'",
+					"protocol": "https",
+					"host": [
+						"homologacaoapi",
+						"nexoweb",
+						"com"
+					],
+					"path": [
+						"NexoAPIRest",
+						"api",
+						"PedidoDeExame"
+					],
+					"query": [
+						{
+							"key": "$filter",
+							"value": "Codigo eq '282'"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PedidoDeExame Atualizar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "TKBouEVfp60wZUrvr5-RWA4ZOnhJWW8bHQVTI4OlrQdrFh4L1JjgpMZymBgkOA3rgyhlPdMqSoMwloSP9vxQL2QxgNPeR1qBVzS0Ro03kU_ZBvt24QtmKqUenQ6gle3AuoMiDfhnA4jcOAPi935aXjEsSgxYYa_gIMD4pXTUtPIpavbNI4McRMJPl9uELv6YraSID_buDLxVNSFtRN70NoOJwbyk4qpZZ1TWxNu42bnziAp_pXfIAts4bL3dKNNvovdIs9Wmlzg8Xob7_s34FaXBoJgi45wMWL8eFrUZMDEhGTjBEyfK2bCHsHj8Gbm2Rz67uS5-60jkCyFbLeMuWVX8WFeg_bEaUqeGeZIAm_E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"Codigo\": \"282\",\r\n  \"CodigoFuncionario\": \"1895\",\r\n  \"CodigoEmpresa\": \"2\",\r\n  \"DataExame\": \"2022-03-23T13:15:30.215Z\",\r\n  \"CodigoExame\": \"C001\",\r\n  \"CodigoExameASO\": null,\r\n  \"CodigoMedico\": \"82\",\r\n  \"CodigoClinica\": \"001\",\r\n  \"Validade\": 12,\r\n  \"Resultado\": null,\r\n  \"Observacao\": null,\r\n  \"Origem\": null,\r\n  \"DataRealizacao\": \"2022-03-23T13:15:30.215Z\",\r\n  \"Cancelado\": false,\r\n  \"CodigoUsuarioCancelamento\": null,\r\n  \"DataCancelamento\": null,\r\n  \"ObservacaoCancelamento\": null,\r\n  \"CodigoClinicaDeOrigem\": null,\r\n  \"CodigoTipoExame\": \"02\",\r\n  \"ValidadePedido\": 0,\r\n  \"DataFimPedido\": \"2022-03-23T13:15:30.215Z\",\r\n  \"DataProximoExame\": \"2022-03-23T13:15:30.215Z\",\r\n  \"DataResultado\": \"2022-03-23T13:15:30.215Z\",\r\n  \"HoraRealizacao\": \"2022-03-23T13:15:30.215Z\",\r\n  \"CodigoTipoParecer\": \"004\",\r\n  \"EnviaResultadoAoEsocial\": true,\r\n  \"DataInclusaoSistema\": \"2022-03-23T13:15:30.215Z\",\r\n  \"DataAlteracaoSistema\": \"2022-03-23T13:15:30.215Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://homologacaoapi.nexoweb.com/NexoAPIRest/api/PedidoDeExame('282')",
+					"protocol": "https",
+					"host": [
+						"homologacaoapi",
+						"nexoweb",
+						"com"
+					],
+					"path": [
+						"NexoAPIRest",
+						"api",
+						"PedidoDeExame('282')"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PedidoDeExame Atualizar Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "TKBouEVfp60wZUrvr5-RWA4ZOnhJWW8bHQVTI4OlrQdrFh4L1JjgpMZymBgkOA3rgyhlPdMqSoMwloSP9vxQL2QxgNPeR1qBVzS0Ro03kU_ZBvt24QtmKqUenQ6gle3AuoMiDfhnA4jcOAPi935aXjEsSgxYYa_gIMD4pXTUtPIpavbNI4McRMJPl9uELv6YraSID_buDLxVNSFtRN70NoOJwbyk4qpZZ1TWxNu42bnziAp_pXfIAts4bL3dKNNvovdIs9Wmlzg8Xob7_s34FaXBoJgi45wMWL8eFrUZMDEhGTjBEyfK2bCHsHj8Gbm2Rz67uS5-60jkCyFbLeMuWVX8WFeg_bEaUqeGeZIAm_E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"Codigo\": \"282\",\r\n  \"CodigoFuncionario\": \"1895\",\r\n  \"CodigoEmpresa\": \"2\",\r\n  \"DataExame\": \"2022-03-23T13:15:30.215Z\",\r\n  \"CodigoExame\": \"C001\",\r\n  \"CodigoExameASO\": null,\r\n  \"CodigoMedico\": \"82\",\r\n  \"CodigoClinica\": \"001\",\r\n  \"Validade\": 12,\r\n  \"Resultado\": null,\r\n  \"Observacao\": null,\r\n  \"Origem\": null,\r\n  \"DataRealizacao\": \"2022-03-23T13:15:30.215Z\",\r\n  \"Cancelado\": false,\r\n  \"CodigoUsuarioCancelamento\": null,\r\n  \"DataCancelamento\": null,\r\n  \"ObservacaoCancelamento\": null,\r\n  \"CodigoClinicaDeOrigem\": null,\r\n  \"CodigoTipoExame\": \"02\",\r\n  \"ValidadePedido\": 0,\r\n  \"DataFimPedido\": \"2022-03-23T13:15:30.215Z\",\r\n  \"DataProximoExame\": \"2022-03-23T13:15:30.215Z\",\r\n  \"DataResultado\": \"2022-03-23T13:15:30.215Z\",\r\n  \"HoraRealizacao\": \"2022-03-23T13:15:30.215Z\",\r\n  \"CodigoTipoParecer\": \"004\",\r\n  \"EnviaResultadoAoEsocial\": true,\r\n  \"DataInclusaoSistema\": \"2022-03-23T13:15:30.215Z\",\r\n  \"DataAlteracaoSistema\": \"2022-03-23T13:15:30.215Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://homologacaoapi.nexoweb.com/NexoAPIRest/api/PedidoDeExame('282')",
+					"protocol": "https",
+					"host": [
+						"homologacaoapi",
+						"nexoweb",
+						"com"
+					],
+					"path": [
+						"NexoAPIRest",
+						"api",
+						"PedidoDeExame('282')"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MensageriaHistoricoEnvio Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "wuy459JL3N6QNiPS6SnEqUbeKJwo3fnDphDd1J2TrVgMZ4LZUZ5mulEWvdSn398bCAJGXJ7IuA0TbpC4jk_4wSgSYXHCDEzeH-B3LtnzEjfYP0iMl9uUcunzjMx4QLWj8CNcZJpU0j5PHZ07qLt__Q3Oh_rsm_ILoPwmzRg3C5atM9Gzdb6l-bNYZlMCuA3abLX_4HnbXSjirWmC1JyQjoGndTU0VHpZ8gxfc-gFkTNm4BC0w8yOlPqr5XtD-mUJEd688PZIq8S1tWlWSbgCQGs4rKnoXaFS1QLj1oJ0XwNfqkWPpbO1_Kjve6xbweuagpN_R_fk0sIdBcPLs6WCUT_C-i53k1-Jti-b4POKbPpkD6VIM5kKScV_uc-JBTCW6KDK__Atc_Lu0HNm702W9aBApNJzULp4TWqlv6KzXvE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://homologacaoapi.nexoweb.com/NexoAPIRest/api/MensageriaHistoricoEnvio?IdEvento=ID1155279060000002022060216210600379",
+					"protocol": "https",
+					"host": [
+						"homologacaoapi",
+						"nexoweb",
+						"com"
+					],
+					"path": [
+						"NexoAPIRest",
+						"api",
+						"MensageriaHistoricoEnvio"
+					],
+					"query": [
+						{
+							"key": "dataInicio",
+							"value": "2022-06-01T00:00:00Z",
+							"disabled": true
+						},
+						{
+							"key": "dataFim",
+							"value": "2022-06-02T21:46:13Z",
+							"disabled": true
+						},
+						{
+							"key": "IdEvento",
+							"value": "ID1155279060000002022060216210600379"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	]
+}
