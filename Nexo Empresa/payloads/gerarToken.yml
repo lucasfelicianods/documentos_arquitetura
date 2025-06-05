@@ -1,7 +1,7 @@
 curl --location --request POST 'https://HOMOLOGACAOapi.nexoweb.com/NexoAPIRest/token' \
---header 'Authorization: Bearer P3bQwj4BbumJoVJuWOkgUODCVBHt6dDkLWZXcTl3Uc4jfrYi9A0Kyq4sFdlWpw402G8oTr64LKIQpN_Kg7ZrmlZGYm9Rs-1iaoEmAjWsC0FmtqLWOAQAgxAPYRJj_KPPPugIQnC8zKskRfZI14hQHc2k59ayUn0XEwEUhSlCrSSbvtBwvRiuARnoZthiVTvsFMrz7dHBOsww1_p0rriB_m92T8aLFo7GNdNK-0LlbwLp2nF6Ly4d2mG8ppRz5GyszdIrEYQhxyN4GBaYtAjPXYZ-eEiaoflO53PRhf8kz7YpIiyAkaTX63zGk9TFnnv1_J3ySqoHBas_zJddyxrDBQyY5gleHj_5H3fIhcWQjhzhJUyNCsTjV94BrRVKT-c53NB0cx-jozBa5O_-p6IcPkIuf9oM1e8G3Yriz3osCQQ' \
+--header 'Authorization: Bearer TESTEP3bQwj4BbumJoVJuWOkgUODCVBHt6dDkLWZXcTl3Uc4jfrYi9A0Kyq4sFdlWpw402G8oTr64LKIQpN_Kg7ZrmlZGYm9Rs-1iaoEmAjWsC0FmtqLWOAQAgxAPYRJj_KPPPugIQnC8zKskRfZI14hQHc2k59ayUn0XEwEUhSlCrSSbvtBwvRiuARnoZthiVTvsFMrz7dHBOsww1_p0rriB_m92T8aLFo7GNdNK-0LlbwLp2nF6Ly4d2mG8ppRz5GyszdIrEYQhxyN4GBaYtAjPXYZ-eEiaoflO53PRhf8kz7YpIiyAkaTX63zGk9TFnnv1_J3ySqoHBas_zJddyxrDBQyY5gleHj_5H3fIhcWQjhzhJUyNCsTjV94BrRVKT-c53NB0cx-jozBa5O_-p6IcPkIuf9oM1e8G3Yriz3osCQQ' \
 --header 'Content-Type: application/x-www-form-urlencoded' \
 --data-urlencode 'grant_type=password' \
---data-urlencode 'username=LIGHTAPI' \
+--data-urlencode 'username=SISTEMA' \
 --data-urlencode 'password=0Sxw133&XXiO' \
---data-urlencode 'client_ID=LIGHT'
+--data-urlencode 'client_ID=SISTEMA'
