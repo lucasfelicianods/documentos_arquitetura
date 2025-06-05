@@ -38,7 +38,7 @@ Fluxos de implementação
 
 ##### **Fluxo: Rh-Recebe-Empresa**
 
-1. Criar ```Rh-Recebe-Empresa```: Microserviço responsável por disponibilizar um proxy que receberá requisições REST vinda do SAP ECC PI (Sistema Light) Exemplo: [Chamada que receberemos](payloads/openApiEntrada.txt) para recebimento de informações de empresa;
+1. Criar ```Rh-Recebe-Empresa```: Microserviço responsável por disponibilizar um proxy que receberá requisições REST vinda do SAP ECC PI (Sistema Empresa) Exemplo: [Chamada que receberemos](payloads/openApiEntrada.txt) para recebimento de informações de empresa;
 2. Criar tópico ```rh-fct-recebe-empresa-falha```;
 3. Configurar o microserviço para enviar de mensagem recebida via HTTP/REST para o tópico ```rh-sys-recebe-empresa``` segue o exemplo que como será a estrutura da mensagem: [Json recebido via HTTP/REST](payloads/jsonEntradaProcessa.txt), O payload que deverá ser publicado no tópico ```rh-sys-recebe-empresa``` terá que ser adicionado dois campos, são eles: ```data: dd/mm/yyyy HH:mm:SSS ``` e  ```id: x-correlation-id ```; 
 4. Configurar produtor no Apache Camel;
@@ -146,9 +146,9 @@ Toda as requisições para os microserviços (```Rh-Recebe-Empresa```, ```Schedu
 
 Criar todos os templates de observabilidade para os microserviços (```Rh-Recebe-Empresa```, ```Schedule-Token```e ```Nexo-Processa-Empresa```) conforme já configurado no grafanas de DEV e PRD.
 
-https://grafana-grafana-dev.apps.aro-cluster-002.grupolight.local/login
+https://grafana-grafana-dev.apps.aro-cluster-002.grupoEmpresa.local/login
 
-https://grafana-grafana-prd.apps.aro-cluster-002.grupolight.local/login
+https://grafana-grafana-prd.apps.aro-cluster-002.grupoEmpresa.local/login
 
 Configurar é testar metricas é alertas de cada Microserviços.
 
@@ -295,14 +295,14 @@ Design de Camadas
 
 **Pacotes**
 
-- br.com.light.soap - classes de rotas camel (endpoints soap);
-- br.com.light.domain - classes POJOs com objetos de domínio;
-- br.com.light.service - classes de implementação/manipulação com persistência, mensageria, etc;
-- br.com.light.processor - classes de serviço camel;
-- br.com.light.repository - classes de persistência;
-- br.com.light.config - classes de configuração (producer/consumer Kafka, conexões de banco, openApi, etc);
-- br.com.light.util - classes de utilidade java;
-- br.com.light.logging - classes de logging do projeto;
+- br.com.Empresa.soap - classes de rotas camel (endpoints soap);
+- br.com.Empresa.domain - classes POJOs com objetos de domínio;
+- br.com.Empresa.service - classes de implementação/manipulação com persistência, mensageria, etc;
+- br.com.Empresa.processor - classes de serviço camel;
+- br.com.Empresa.repository - classes de persistência;
+- br.com.Empresa.config - classes de configuração (producer/consumer Kafka, conexões de banco, openApi, etc);
+- br.com.Empresa.util - classes de utilidade java;
+- br.com.Empresa.logging - classes de logging do projeto;
 
 **ContractFirst**
 
@@ -321,8 +321,8 @@ Design de Camadas
 **Testes**
 
 - classes de teste com referência aos mesmos pacotes java;
-- br.com.light.mock - classes de mock;
-- br.com.light.stubs - classes de stubs;
+- br.com.Empresa.mock - classes de mock;
+- br.com.Empresa.stubs - classes de stubs;
 
 Glossário
 ---------
